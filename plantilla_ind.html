@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<!-- A partir de aquí empieza la presentación -->
+				<section>
+					<h1>Primer Presentación 2023</h1>
+					<p>
+						<small>Por <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+						</small>
+					</p>
+				</section>
+				<section>
+					<h1>¿Para que sirve <a href="https://revealjs.com/">reveal.js</a>?</h1>
+					<p>Permite crear diapositivas interactivas bien diseñadas utilizando HTML.</p>
+					<p><a href="demo.html">Demo</a></p>
+				</section>
+				<section>
+					<section>
+						<h2>Subsección 1</h2>
+						<p>La primer característica que vale la pena señalar son las diapositivas <i>verticales</i></p>
+						<p>Para realizar estas diapositvas solo se necesita crear <i>secciones anidadas,</i> o más bien, subsecciones.</p>
+					</section>
+					<section>
+						<h2>Subsección 2</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non scelerisque ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vitae dapibus quam, a pulvinar nulla. Praesent non lectus non massa ultricies varius.</p>
+					</section>
+					<section>
+						<h2>Subsección 3</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non scelerisque ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vitae dapibus quam, a pulvinar nulla. Praesent non lectus non massa ultricies varius.</p>
+					</section>
+					<section>
+						<h2>Subsección 4</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non scelerisque ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum vitae dapibus quam, a pulvinar nulla. Praesent non lectus non massa ultricies varius.</p>
+					</section>
+					<section>
+						<h2>Regresar</h2>
+						<p><a href="#/2">Regresar</a></p>
+					</section>
+				</section>
+				<section></section>
+				<section></section>
+				<section></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

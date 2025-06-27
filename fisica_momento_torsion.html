@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Física</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+		<link rel="stylesheet" href="dist/theme/league.css">
+		<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/night.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/moon.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ...................................................................................  -->
+<!-- .........................Inicio de la presentación.................................  -->
+<!-- ...................................................................................  -->
+<section>
+	<!-- <a href="https://revealjs.com"> -->
+	<!-- <img src="uttlogo.png" alt="UTT Logo" style="background: transparent;" class="demo-logo"> -->
+	<!-- </a> -->
+	<h4>Unidad 3</h4>
+	<h2>Momento de torsión y equilibrio rotacional</h2>
+	<p>
+	<small>Maestro: <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+	</small>
+	</p>
+</section>
+
+				<section data-markdown
+				data-separator="^---"
+				data-separator-vertical="^\n"
+				data-separator-notes="^Nota:">
+				<textarea data-template>
+## Momento de torsión
+
+Se ha definido la fuerza como un tirón o un empujón que tienda a causar movimiento.
+
+El momento de torsión $\Tau$ se define como la tendencia a producir un cambio en el movimiento rotacional:
+
+Momento de torsión = fuerza X brazo palanca
+$$\Tau = Fr$$
+---
+### Ejemplo
+Se ejerce una fuerza de 250 N sobre un cable enrollado alrededor de un tambor de 120 mm de diámetro. ¿Cuál es el momento de torsión producido al centro del tambor?
+---
+### Ejemplo
+Un mecánico ejerce una fuerza de 20 lb en el extremo de una llave de 10 in, como se observa. Si este tirón forma un ángulo de 60° con el mango de la llave, ¿cuál es el momento de torsión producido en la tuerca?
+---
+# Momento de torsión Resultante
+
+Las fuerzas que carecen de una línea de acción común producen una resultante del Momento de torsión, además de una resultante de la fuerza traslacional.
+
+Cuando las fuerzas aplicadas actúan en el mismo plano, el momento de torsión Resultante es la suma algebraíca de los momentos de tensión positivos y negativos a cada fuerza.
+
+$$\Tau=\Sigma\Tau =\Tau_1+\Tau_2+\Tau_3+\ldots$$
+---
+### Ejemplo
+</textarea>
+</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>

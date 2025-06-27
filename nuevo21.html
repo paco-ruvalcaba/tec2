@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+	<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow">
+		  <animate attributeName="r" begin="1s" dur="8s" from="10" to="60" repeatCount="4"/>
+	</svg>
+	<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="50" cy="50" r="25" style="fill:red;">
+		<set attributeName="r" to="50" begin="3s" />
+		Sorry, your browser does not support inline SVG.
+	</svg>
+	<input type="button" value="Change Style" onclick="changeStyle()" />
+
+	<hr>
+
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <circle id="circle2" cx="50" cy="50" r="25" style="fill:red;" />
+  Sorry, your browser does not support inline SVG.
+</svg>
+
+<input type="button" value="Change Style" onclick="changeStyle()" />
+
+<script>
+function changeStyle() {
+  document.getElementById("circle2").style.fill="green";
+}
+</script>
+<hr>
+
+<svg width="600" height="100" xmlns="http://www.w3.org/2000/svg">
+  <circle id="circle4" cx="50" cy="50" r="50" style="fill:red;" />
+</svg>
+
+<script>
+var t = null;
+
+function start() {
+  if(t == null) {
+    t = setInterval(animate, 20);
+  }
+}
+
+function stop() {
+  if(t != null) {
+    clearInterval(t);
+    t = null;
+  }
+}
+
+function animate() {
+  var circle = document.getElementById("circle4");
+  var cx = circle.getAttribute("cx");
+  var newCX = 2 + parseInt(cx);
+  if(newCX > 600) {
+    newCX = 50;
+  }
+  circle.setAttribute("cx", newCX);
+}
+</script>
+
+<br/>
+<input type="button" value="Start" onclick="start()" />
+<input type="button" value="Stop" onclick="stop()" />
+
+</body>
+</html>

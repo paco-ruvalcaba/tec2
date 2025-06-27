@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>CIM</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/league.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/night.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<link rel="stylesheet" href="dist/theme/moon.css">
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ...................................................................................  -->
+<!-- .........................Inicio de la presentación.................................  -->
+<!-- ...................................................................................  -->
+<section>
+	<!-- <a href="https://revealjs.com"> -->
+	<!-- <img src="uttlogo.png" alt="UTT Logo" style="background: transparent;" class="demo-logo"> -->
+	<!-- </a> -->
+	<h4>Tema</h4>
+	<h2>Neumática</h2>
+	<p>
+	<small>Maestro: <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+	</small>
+	</p>
+</section>
+
+	
+				<section data-markdown
+				data-separator="^---"
+				data-separator-vertical="^\n"
+				data-separator-notes="^Note:">
+				<textarea data-template>
+# INTRODUCCIÓN
+
+El aire comprimido es una de las formas de energía más antiguas que conoce el hombre y que éste ha utilizado y utiliza para ampliar sus recursos físicos. De los antiguos griegos procede la expresión "Pneuma", que designa la respiración, el viento y, desde el punto de vista filosófico, también el alma. Como derivación de las ideas que representa la palabra "Pneuma" se obtuvo, entre otras cosas el concepto Neumática, que trata los movimientos y procesos del aire.
+
+Para comprender el amplio uso de esta tecnología, y aunque posteriormente se verá más detalladamente, expliquemos brevemente el porqué del uso de la Neumática. 
+
+Algunas de sus ventajas principales son:
+
+- El aire es de fácil captación y abunda en la tierra.
+- Es un tipo de Energía limpia.
+- El aire no posee propiedades explosivas, por lo que no existen riesgos de chispas.
+- Las velocidades de trabajo de los elementos neumáticos son razonablemente altas y de relativa facilidad de regulación.
+
+- El trabajo con aire no provoca efectos de golpes de ariete, con lo que no daña los componentes de un circuito.
+- Las sobrecargas no constituyen situaciones peligrosas o que dañen los equipos en forma permanente.
+- Los cambios de temperatura no afectan de manera significativa.
+- Permite cambios instantáneos de sentido en los componentes.
+
+Todas estas ventajas son de gran importancia, pero no olvidemos que, como todas las tecnologías, también tiene algunos inconvenientes. Para evitar la parcialidad, enumeremos sus desventajas más notables:
+- En circuitos muy extensos se producen pérdidas de cargas considerables
+- Requiere de instalaciones especiales para recuperar el aire previamente empleado
+- Las presiones a las que trabajan normalmente, no permiten aplicar grandes fuerzas
+- Genera altos niveles de ruido debido a la descarga del aire hacia la atmósfera
+
+![](screenshot.1054.jpg)
+![](screenshot.1055.jpg)
+![](screenshot.1056.jpg)
+---
+## CONCEPTOS GENERALES DE NEUMÁTICA
+
+## Fundamentos Físicos
+
+La neumática como tecnología es relativamente joven. Está en constante expansión, ya que parte de los nuevos componentes se hacen por encargo: el cliente se presenta con un problema de automatismo neumático y la empresa, después de su estudio da una posible solución al cliente. Esto hace que se incremente el número de dispositivos en neumática. A pesar de esto, los principios físicos son los mismos para todo desarrollo.
+
+Para familiarizarnos con estos principios neumáticos, veremos un breve resumen sobre:
+- Los diferentes conceptos de presión: atmosférica, relativa, absoluta,…
+- Las diferentes leyes y la ecuación general de los gases ideales
+- Las propiedades de la mezcla de gases y los conceptos asociados con el aire comprimido, como la humedad.
+
+## El Aire comprimido y sus propiedades
+
+El hecho de comprimir aire es debido a que el aire comprimido constituye en realidad una forma de transporte de energía de muy fácil manejo y por esto su utilización se ha ido imponiendo paulatinamente en la industria.
+
+Las principales propiedades que han contribuido a que el aire comprimido sea tan ampliamente utilizado son:
+
+- Abundante: Está disponible para su compresión prácticamente en todo el mundo, en cantidades ilimitadas.
+- Transporte: El aire comprimido puede ser fácilmente transportado por tuberías, incluso a grandes distancias. No es necesario disponer tuberías de retorno.
+- Almacenable: No es preciso que un compresor permanezca continuamente en servicio. El aire comprimido puede almacenarse en depósitos y tomarse de éstos.
+
+- Además, se puede transportar en recipientes (botellas).
+- Temperatura: El aire comprimido es insensible a las variaciones de temperatura, garantiza un trabajo seguro incluso a temperaturas extremas.
+- Antideflagrante: No existe ningún riesgo de explosión ni incendio; por lo tanto, no es necesario disponer instalaciones contra incendio, que son muy caras.
+
+- Limpio: El aire comprimido es limpio y, en caso de faltas de estanqueidad en elementos, no produce ningún ensuciamiento Esto es muy importante por ejemplo, en las industrias alimenticias, de la madera, textiles y del cuero.
+- No recuperación: no requiere instalaciones especiales para la recuperación del fluido de trabajo (aire).
+- Constitución simple de los elementos: que implica precios económicos
+
+- Velocidad: Permite obtener velocidades de trabajo muy elevadas. (La velocidad de trabajo de cilindros neumáticos pueden regularse sin escalones.)
+- A prueba de sobrecargas y golpes de ariete: Los elementos de trabajo neumáticos pueden llegar hasta su parada completa sin riesgo de sobrecargas.
+
+Para delimitar el campo de utilización de la neumática es preciso conocer también las características adversas.
+
+- Preparación: El aire atmosférico comprimido debe ser preparado, antes de su utilización. Es preciso eliminar impurezas y humedad (al objeto de evitar un desgaste prematuro de los componentes). Desde el punto de vista microscópica, el aire presenta impurezas que, para su uso satisfactorio, deben eliminarse. 
+- Compresible: Con aire comprimido no es posible obtener para los émbolos velocidades uniformes y constantes.
+
+- Fuerza: El aire comprimido es económico sólo hasta cierta fuerza. Condicionado por la presión de servicio normalmente usual de 700 kPa (7 bar), el límite, también en función de la carrera y la velocidad, es de 20.000 a 30.000 N (2000 a 3000 kp). Para masas superiores se debe recurrir a la Hidráulica.
+- Escape: El escape de aire (descarga a la atmósfera del aire utilizado) produce ruido. Se evitarse razonablemente con materiales insonorizantes y silenciadores. Cabe aclarar que el aire de descarga podría estar contaminado y que por lo tanto no puede recuperarse.
+
+- Costos: El aire comprimido es una fuente de energía relativamente cara; este elevado costo se compensa en su mayor parte por los elementos de precio económico y el buen rendimiento (cadencias elevadas).
+- Los movimientos de los actuadores neumáticos no son rigurosamente regulares ni constantes debido a la calidad elástica del aire. Estas inexactitudes van en aumento en la medida en que la velocidad de dichos elementos se hace más lenta.
+---
+## INSTALACIONES NEUMÁTICAS. COMPONENTES
+
+- Desde el año 1885 en París, hubo que enfrentarse realmente con el problema que significaba hacer llegar el aire comprimido a larga distancia a cada toma de consumo. El problema reviste bastante importancia pues con él están relacionados muchos diferentes aspectos: tipo de red, material de la tubería, tipos de unión, dimensiones, pérdidas de carga, accesorios, formas de montaje,...
+
+- En este apartado vamos a analizar detalladamente cada uno de los componentes que conforman una red de aire comprimido, desde la generación hasta el consumo.
+
+- En la figura 1.12 aparecen los elementos principales de una red neumática. En los apartados siguientes se detallarán y pormenorizarán cada uno de ellos.
+
+![](screenshot.1057.jpg)
+---
+## Generación del aire comprimido: El compresor
+
+![](screenshot.1058.jpg)
+
+Básicamente, un compresor admite gas o vapor a una presión pl dada, descargándolo a una presión p2 superior, comprimiéndolo en una cámara y haciéndolo pasar a través de un conducto de menor sección (para poder vencer la fuerza en la válvula generada por la sobrepresión conseguida). La energía necesaria para efectuar este trabajo la proporciona un motor eléctrico, de combustión o una turbina de vapor (ver Fig. 1.14).
+
+![](screenshot.1059.jpg)
+
+![](screenshot.1060.jpg)
+
+![](screenshot.1061.jpg)
+
+![](screenshot.1062.jpg)
+
+![](screenshot.1063.jpg)
+---
+## Válvulas
+
+Las válvulas neumáticas controlan o regulan el paso del aire comprimido y su clasificación se efectúa por la función que desarrollan.
+
+Lla norma DIN 24300 establece la siguiente división: Los diferentes tipos de válvulas existentes son: direccionales o distribuidoras, de bloqueo, de presión, de caudal y de cierre. Veamos a continuación los principales tipos de válvulas.
+
+## Válvulas direccionales o distribuidoras
+
+Estas válvulas controlan el arranque, detención de la dirección del flujo neumático y con ello la dirección del movimiento y las posiciones de detención de los motores o cilindros. 
+
+La identificación de las válvulas direccionales se realiza sobre la base de:
+- Su constitución interna.
+- Nº de posiciones,
+- Nº de vías (u orificios),
+- accionamientos y
+- Talla (caudal, presión, temperatura, marca, etc.)
+
+## Constitución
+
+Las características constructivas de las válvulas son la que determinan su duración, fuerza de accionamiento, modos de inversión, racordaje y fijación.
+
+Según la construcción de sus cierres, distinguimos los siguientes tipos:
+
+![](screenshot.1065.jpg)
+
+Las válvulas direccionales de asiento son las más comunes; se abren o cierran por medio de bolas, discos o conos de cierre perfecto. Los elementos de desgaste son pocos y de gran duración, siendo insensibles al polvo y muy robustos. Permiten sólo dos posiciones y la fuerza de maniobra es elevada.
+
+Según su construcción, disponemos de tres tipos o subclases: de corredera, de disco y de asiento. Cada una responde a una necesidad:
+
+- De corredera: Con un émbolo móvil, encargado de obturar o liberar el paso del aire. Como gran ventaja, necesitan poca energía para accionar la válvula, aunque tenga que vencer al rozamiento por sus características constructivas.
+- De disco: De accionamiento puramente manual, es un disco que se coloca manualmente sobre el (los) orificio(s) de paso del aire al accionar una palanca.
+- De asiento: Disponen en su constitución física de un obturador que se mueve en la misma dirección del aire. Se usan para caudales o muy grandes o muy pequeños, para el resto de caudales se suele usar las válvulas de corredera. 
+---
+## Representación esquemática 
+
+Para representar elementos neumáticos, se utilizan los símbolos; éstos no dan orientación alguna sobre su constitución interna, sólo indican su función.
+
+Los conceptos principales en la representación son la vía y las posiciones. El primero es el orificio de conexión externa que dispone la válvula. El número de vías coincide con las que encontramos recorriendo la válvula perimetralmente. No se deben tener en cuenta los orificios de purga, o las conexiones que disponga la válvula para su pilotaje. Las posiciones se refieren a las conexiones internas que puede realizar según su diseño. Este número será el número de posiciones posibles.
+
+Las válvulas distribuidoras se representan por cajas. La cantidad de cajas yuxtapuestas indica las posibles posiciones, y las vías quedan representadas por las entradas y salidas de las líneas interiores que atraviesan dichas cajas. Existen toda clase de combinaciones de canalizaciones: ―doble mando, obturaciones, conexiones, escape común,…
+
+Con el fin de reconocer cada conexión se identifican con números o antiguamente con letras, pero independientemente que nos encontremos planos antiguos o actuales, siempre veremos esta nomenclatura escrita en la posición de reposo o inicial, y nunca se vuelve a escribir la nomenclatura en la otra u otras posiciones (por claridad) y se utilizan de la siguiente forma:
+
+- 1 ó P : Suministro de presión
+- 3, 5 ó R, S : Escapes
+- 2, 4 ó A, B : Utilización
+
+En definitiva, con estos elementos, tenemos la posibilidad de representar una válvula.
+
+![](screenshot.1066.jpg)
+
+Para definir completamente una válvula a través de su símbolo, es necesario incorporarle la forma en que será accionada. Estos accionamientos pueden ser de tipo muscular, mecánico, eléctrico, neumático o combinado.
+
+Disponemos de dos tipos de accionamiento, los realizados de forma indirecta, mediante electricidad o mecánica, y los manuales o directos, con algún tipo de mecanismo para que un operario interactúe. Asimismo, existen accionamientos mixtos: Manual o directo; servopilotado, semi-directo o semi-indirecto; e Indirecto (o pilotado).
+
+En la figura siguiente observamos una válvula distribuidora completamente definida.
+
+![](screenshot.1067.jpg)
+---
+## 2) Válvulas de bloqueo
+
+En primer lugar, diremos que este tipo de válvulas tienen la peculiaridad de accionarse ante unas determinadas condiciones. Son válvulas con la capacidad de bloquear o permitir el paso del aire comprimido cuando se dan ciertas condiciones en el circuito. En este tipo de válvulas encontraremos:
+
+- Antiretorno
+- De simultaneidad
+- De selección de circuito (selectoras)
+- De escape.
+---
+## Válvulas de regulación
+
+Son las válvulas para regular caudal y presión. En esta clase de válvula, nos encontramos con dos maneras diferentes de regular la cantidad de aire o fluido: Por la entrada o por la salida, según actuemos sobre el fluido entrante o saliente del actuador.
+
+Sí quisiéramos controlar la velocidad de un cilindro, siempre lo haríamos mediante la regulación de salida, porque admite todo tipo de carga, mientras que por la entrada no.
+
+El funcionamiento de las válvulas reguladoras de caudal lo veremos en detalle en la simulación del bloque 3. Las reguladoras de presión basan su funcionamiento en la deformación de una membrana, que por un lado tiene la presión de entrada y por otro un resorte posicionable mediante tornillo para controlar la regulación.
+---
+## Actuadores neumáticos
+
+Los elementos que permiten efectuar la transformación de la energía de presión transmitida por el aire, en energía mecánica, es decir en trabajo, se denominan actuadores neumáticos.
+
+Existe una clásica división, entre los elementos de trabajo neumático, basadas en sus posibilidades de actuación: los elementos o actuadores de acción lineal y los de acción rotativa. Aunque, por otra parte, se han desarrollado tantas formas y modelos que prácticamente todas las industrias han encontrado una aplicación insustituible de los mismos.
+
+Al tratar de generar un movimiento rectilíneo sin partir de uno de rotación, vemos bastante limitado nuestro campo de acción. Entre los elementos posibles, después de un prolijo análisis, se encuentran: el electroimán, el resorte, el plano inclinado (aprovechamiento de la gravedad) y finalmente la energía de presión. Cada uno de los casos anteriores, salvo el último, no permite un control sencillo del movimiento.
+
+Un actuador neumático estándar adecuado para una instalación debe cumplir:
+- Que exista en el tamaño necesario (diámetro y longitud)
+- Que su rozamiento interno sea lo más bajo posible y su vida útil sea lo más larga posible
+
+- Que su montaje o instalación sea simple y rápida
+- Que existan gran variedad de diseños para adaptarlos a nuestra necesidad
+- Que pueda utilizase con o sin lubricación
+- Que resista los esfuerzos de tracción, compresión y térmicos sin deformarse.
+---
+## Tipos de cilindros
+
+### Cilindro simple efecto
+
+Es un actuador capaz de recibir en una cámara una determinada cantidad de aire comprimido que al expandirse, mueve un eje o vástago que realiza un trabajo mecánico. Se denomina de simple efecto porque su ―efecto‖, es decir, el trabajo que origina, sólo se produce en un sentido. Este trabajo se manifiesta a partir del movimiento de un eje o vástago del pistón.
+
+![](screenshot.1068.jpg)
+
+El movimiento de reposición del vástago a su condición de equilibrio se realiza a través de un resorte, que almacenó energía en la carrera de ida y lo devuelve en la de vuelta. En todos los casos, el cilindro de simple efecto recibe aire en una sola de las cámaras mientras que la otra está constantemente conectada a la atmósfera.
+
+Por otra parte, no siempre un actuador rectilíneo realiza su trabajo por desplazamiento de un pistón, también puede hacerlo por deformación de una membrana. La figura siguiente nos muestra un actuador construido con membrana. El área útil es significativamente grande y las cámaras de estos aparatos son muy cortas. Reconocemos inmediatamente un par de aplicaciones para este tipo de actuador: apertura y cierre de válvulas globo o esclusa y frenos de aire de camiones y acoplados.
+
+![](screenshot.1069.jpg)
+
+### Cilindro doble efecto
+
+Este tipo de actuador es el más utilizado en automatización mediante neumática, pues es muy versátil en sus aplicaciones y muy sencillo de controlar. Su denominación obedece a la característica que tienen de posibilitar el trabajo en los dos sentidos (avance y retroceso). Su construcción es similar a los de simple efecto, pero sin resorte de reposición y requieren
+obligatoriamente estanqueizar las dos cámaras.
+
+Sus recorridos y secciones están normalizados y la fuerza que debe realizar es uno de los factores que limitan esta carrera debido al fenómeno de pandeo. Por otra parte, diremos también que, la fuerza que puede realizar en la carrera de avance es ligeramente mayor que la que realiza durante el retroceso debido a la diferencia de área útil (aunque existen cilindros que solventan este problema, como los de doble vástago).
+
+![](screenshot.1070.jpg)
+
+La figura 1.27 nos muestra un cilindro de doble efecto en posición de descanso. Haciendo ingresar aire a presión en la cámara trasera y liberando el de la delantera a la atmósfera logramos la salida del eje. La fuerza que desarrolla durante el movimiento dependerá de la presión de alimentación y de la carga a mover. Su recuperación se consigue entregando aire a presión en la cámara delantera y liberando el de la trasera.
+
+Es importante tener en cuenta la inercia cuando las aceleraciones son importantes. Por otra parte, el inicio del movimiento no ofrece mayores problemas. No es así al final del movimiento, cuando se produce un choque, que puede ocasionar daños graves.
+
+Para evitarlo, se suele recurrir al ―amortiguador interna de final de carrera‖, que consiste en un montaje interno del actuador con dos caminos para el aire, que hace que un instante antes de terminar la carrera, el vástago, que transporta consigo un ―buje-tapón‖ que lo rodea y está junto al pistón, obtura completamente el camino fácil de salida del aire, permitiéndole su escape por un orificio de sección generalmente regulable, que hace que la cámara contraria al movimiento eleve su presión para generar una fuerza resistente capaz de frenarlo. Podríamos decir que es un artificio obligatorio para actuadores cuyos diámetros superen los 50 mm.
+
+
+---
+# DISEÑO Y CÁLCULO
+---
+# PRINCIPALES ELEMENTOS NEUMÁTICOS
+---
+# CIRCUITOS NEUMÁTICOS
+---
+# INSTALACIONES NEUMÁTICAS
+<img width="871" height="658" src="e10a404e3f804805be51db679d045f25.png"/>
+<!-- <img src="linea.png" width="25%"> -->
+
+ 
+				</textarea>
+				</section>
+				
+				<!-- <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"> -->
+					<!-- <div class="r-stack justify-center"> -->
+						<!-- <div data-id="box1" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box2" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box3" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box4" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box5" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box6" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box7" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box" style="background: dodgerblue; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+					<!-- </div> -->
+					
+				<!-- </section> -->
+				<!-- <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"> -->
+					<!-- <div class="r-stack justify-center"> -->
+						<!-- <div data-id="box1" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box2" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box3" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box4" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box5" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box6" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box7" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+					<!-- </div> -->
+				<!-- </section> -->
+				<!-- <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"> -->
+					<!-- <div class="r-vstack justify-center"> -->
+						<!-- <div data-id="box1" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box2" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box3" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box4" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box5" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box6" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box7" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+					<!-- </div> -->
+				<!-- </section> -->
+				<!-- <section>ok</section> -->
+				<!-- <section></section> -->
+				<!-- <section></section> -->
+				<!-- <section></section> -->
+				<!-- <section></section> -->
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>

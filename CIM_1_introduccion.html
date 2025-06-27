@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>CIM</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/league.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/night.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<link rel="stylesheet" href="dist/theme/moon.css">
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ...................................................................................  -->
+<!-- .........................Inicio de la presentación.................................  -->
+<!-- ...................................................................................  -->
+<section>
+	<!-- <a href="https://revealjs.com"> -->
+	<!-- <img src="uttlogo.png" alt="UTT Logo" style="background: transparent;" class="demo-logo"> -->
+	<!-- </a> -->
+	<h4>Tema</h4>
+	<h2>Introducción al concepto de CIM</h2>
+	<p>
+	<small>Maestro: <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+	</small>
+	</p>
+</section>
+
+	
+				<section data-markdown
+				data-separator="^---"
+				data-separator-vertical="^\n"
+				data-separator-notes="^Note:">
+				<textarea data-template>
+#  CIM – Manufactura Integrada por Computadora
+
+La Manufactura Integrada por Computadora (CIM) es un método de manufactura en el cual el proceso entero de producción es controlado por una computadora. 
+
+Tipicamente, depende de procesos de control de lazo cerrado, basados en entradas en tiempo real desde sensores. 
+
+<!-- La propuesta de De Lorenzo para productos de automatización CIM está especialmente diseñada para los estudiantes de ingeniería. Permite el estudio de la teoría y el trabajo práctico con el sistema para obtener conocimientos profundos sobre CIM, que se aplícan también a aplicaciones transversales en las siguientes áreas didácticas: Automatización, Pneumática, Mecatrónica, Electrónica, Control de procesos -->
+
+Nuestro sistema CIM está compuesto por diferentes módulos, cada uno para reproducir una aplicación básica de las comúnmente utilizadas en la industria.
+
+Cada módulo está implementado con componentes electrónicos, mecánicos y neumáticos reales y desempeña una función específica. Como un sistema de cómputo integrado, la salida de una actividad sirve como entrada de la actividad siguiente, por medio de una cadena de eventos. El sistema completo es controlado por un Controlador de Lógica Programable (PLC) y puede ser configurado para desempeñar un proceso completo.
+
+Los módulos básicos son:
+
+- Unidad Transportadora
+- Unidad de Transferencia Lineal
+- Unidad Pick & Place
+- Mesa Rotativa de Seis Estaciones
+
+- Sistema de Visión para Inspección
+- Unidad de Perforación
+- Brazo de Descarga
+- Unidad de Pesado
+- Unidad Paletizadora
+
+Cualquier combinación de los módulos permite crear diferentes sistemas. 
+---
+## Unidad Transportadora
+![](u_trans.jpg)
+
+Los materiales se transfieren en movimiento lineal por medio de una banda transportadora impulsada por un motor a DC. Esta unidad mueve materiales / objetos de un lado a otro. Es un modelo miniatura de un sistema industrial real de banda transportadora.
+---
+## Unidad de Transferencia Lineal
+![](u_trans_l.jpg)
+
+La Unidad de Transferencia Lineal es un actuador lineal controlado electro-neumáticamente. Interruptores magnéticos están colocados para sensar las posiciones de extensión y retracción de la unidad de transferencia. 
+
+La Unidad de Transferencia Lineal transfiere materiales desde la banda transportadora hacia la Unidad Pick & Place, con la ayuda de un cilindro (sin barra) de doble acción operado neumáticamente
+---
+## UNIDAD “PICK AND PLACE”
+![](u_pp.jpg)
+
+La Unidad Lineal Pick & Place es un sistema de control totalmente electro-neumático. 
+
+Se compone de tres partes principales: un brazo vertical (cilindro vertical de doble acción), un brazo horizontal (cilindro horizontal de doble acción) y un agarrador o gripper angular (de doble acción para sostener las piezas de trabajo). Interruptores magnéticos están colocados para sensar las posiciones extendida y retraída del actuador. 
+
+La Unidad Lineal Pick & Place transfiere el material desde el final de la Unidad de Transferencia Lineal a la Unidad siguiente, con la ayuda de los brazos vertical, horizontal y del agarrador angular.
+---
+## MESA ROTATIVA DE SEIS ESTACIONES 
+![](u_r6.jpg)
+
+Una máquina de transferencia rotativa consiste de una mesa de trabajo circular horizontal, en la cual se coloca la pieza de trabajo para ser procesada. 
+
+La mesa de trabajo está indexada para presentar cada pieza de trabajo a cada cabeza de trabajo para lograr la secuencia de operaciones de maquinado.
+---
+## UNIDAD DE PERFORACIÓN
+![](u_per.jpg)
+
+La Unidad simula la función de perforar la pieza de trabajo. El PLC le dice al cilindro plano vertical de doble acción que posicione el dispositivo de perforación cerca de la pieza de trabajo e inicie la perforación.
+---
+## SISTEMA DE VISION PARA INSPECCIÓN
+![](sis_vis.jpg)
+
+Un sistema de visión es un equipo de sensado visual compacto, que se utiliza para inspecciones de proceso en líneas de producción automatizadas. 
+
+Los sistemas de visión sirven bajo la clase de métodos de sensado visual. El sistema de visión básicamente analiza una imagen obtenida por una cámara de video.
+---
+## BRAZO DE DESCARGA
+![](bra_des.jpg)
+
+El Brazo de Descarga o Unidad Pick & Place horizontal es un sistema electro-neumático en el cual el movimiento es controlado por un actuador lineal y rotativo. El sistema trabaja como un robot pick & place miniatura, con campo de aplicación limitado.
+
+El Brazo de Descarga se utiliza para transferir los componentes o piezas de trabajo de una estación de trabajo a otra.
+---
+## UNIDAD DE PESADO
+![](u_pes.jpg)
+
+La Unidad de Pesado consiste de dos elementos: una celda de carga y el circuito de interfase.
+
+La celda de carga genera una resistencia variable relacionada con el peso del objeto que se coloca sobre ella. El circuito de interfase recibe, procesa y envía este valor a la entrada analógica del PLC, el cual determina el peso correspondiente de la pieza de trabajo colocada sobre la celda de carga.
+---
+## UNIDAD PALETIZADORA
+![](u_pal.jpg)
+
+La Unidad Paletizadora se utiliza para paletizar (colocar) la pieza de trabajo en un orden particular. Nuestra Paletizadora XY es una unidad controlada por un motor de pasos. El motor controla el movimiento y la posición de los ejes de la Paletizadora.
+
+Para manejar las piezas de trabajo, se provee una copa de succión que es controlada por medio de un cilindro plano de doble acción. El cilindro se extenderá y retraerá para tomar o dejar la pieza de trabajo.
+
+<!-- <img width="871" height="658" src="e10a404e3f804805be51db679d045f25.png"/> -->
+<!-- <img src="linea.png" width="25%"> -->
+				</textarea>
+				</section>
+				
+				<!-- <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"> -->
+					<!-- <div class="r-stack justify-center"> -->
+						<!-- <div data-id="box1" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box2" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box3" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box4" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box5" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box6" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box7" style="background:    salmon; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box" style="background: dodgerblue; width: 100px; height: 100px; margin: 0px; border-radius: 0px;"></div> -->
+					<!-- </div> -->
+					
+				<!-- </section> -->
+				<!-- <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"> -->
+					<!-- <div class="r-stack justify-center"> -->
+						<!-- <div data-id="box1" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box2" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box3" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box4" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box5" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box6" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box7" style="background:    salmon; width: 1500px; height: 3px; margin: 0px; border-radius: 0px;"></div> -->
+					<!-- </div> -->
+				<!-- </section> -->
+				<!-- <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)"> -->
+					<!-- <div class="r-vstack justify-center"> -->
+						<!-- <div data-id="box1" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box2" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box3" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box4" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box5" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box6" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+						<!-- <div data-id="box7" style="background:    salmon; width: 1500px; height: 3px; margin: 5px; border-radius: 0px;"></div> -->
+					<!-- </div> -->
+				<!-- </section> -->
+				<!-- <section>ok</section> -->
+				<!-- <section></section> -->
+				<!-- <section></section> -->
+				<!-- <section></section> -->
+				<!-- <section></section> -->
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>

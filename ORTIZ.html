@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Adquisición de señales mioeléctricas para identificación de contracciones musculares para su aplicación en un sistema robótico</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/league.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
+		<link rel="stylesheet" href="dist/theme/night.css">
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/moon.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ...................................................................................  -->
+<!-- .........................Inicio de la presentación.................................  -->
+<!-- ...................................................................................  -->
+<section>
+	<!-- <a href="https://revealjs.com"> -->
+	<!-- <img src="uttlogo.png" alt="UTT Logo" style="background: transparent;" class="demo-logo"> -->
+	<!-- </a> -->
+	<h3> Adquisición de señales mioelectricas para identificación de contracciones musculares para su aplicación en un sistema robótico</h3>
+	<p>
+	<small><u>PRESENTA:</u> LUIS FERNANDO ORTÍZ RÍOS
+	</small>
+	<small><u>DIRECTOR:</u> M.C. FRANCISCO RUVALCABA GRANADOS
+	</small>
+	</p>
+</section>
+
+<section>
+	<section>
+	<h4>Cronograma Original</h4>
+		<a href="https://www.plantuml.com/plantuml/svg/dPNFRXCn4CRl-nHpgQ27bP9j_b1EZPg0AX4Hci2bwi6rfy7KQmVRMnJUXYC73eX7o8lXYLEIDHlQ8EMmiRtVz_FCP--PyypwETFUPuhfUSNc2EYoR6BD9-GUrlCEYbRHoLljyCiMLchlE5C8fT7-erh2LsDAQ6UPDu8jGJhWHXcB0gG6nrHObcLNpxkzesCOELy9QM090XsprYXbmgC234uYFWP7l0Rcu6eq75od24K1J0jGp8N1NWk-8Duv6agCbInnRX5r5cN2R200Rig5Ge-2a4vREqW20HLoRuqmf5IYvP8fT1kMwInXEGauEon5voai94EpmRhEqg-pA73IUImPSJ7nkP9EShdwfUc_mzNFBTbW-EulikA9P7EZ16fhH1Pbmco_aMmgoqgnBK4pN0IQNepV9qJTl7Ku4Uaq8xte7XqFagAWmXArDm_zUZCQ9n2zlDqzl66aGzF1imvHK5s6afhnxuujOM4DHyTAIO2x7OHI6bIhxznRoTa6VNWn7INe_QH-nLFg5tKaQIJeH3xPn_GIU72Hjm4eyYF88Ect8n5pSldsFEKyJJZR-pbZUKaaGZOnZiszZ82r0fV8Lz-qv2Q2Z4VdjNk2mbPlzUbUZ1l5-5qM9Hee9hR2c-1nA_Nsm4rUNIHsoLNGVyoE51hSHevRwIkxZf1YC4Cd7-8yIoqFso49D3XUuhrqrDADezywNeu-_B5aVatmp05giNl_Fk9A8ditUYCjL1g2mUe7hvGX14iydaM2GKJOtNKdR_SEAJH9D1s1BC_f02oHUmCpuvc2FAVKTIXsWtkcEOAdyNNm5fkb6wxPv7e3SBA_xcCKiYgdzBsSluvXfnTfLIVDUZjrtGq0n5Ym1_FP_vh71BHhvcUenVhx_ni0"><img src="https://www.plantuml.com/plantuml/svg/dPNFRXCn4CRl-nHpgQ27bP9j_b1EZPg0AX4Hci2bwi6rfy7KQmVRMnJUXYC73eX7o8lXYLEIDHlQ8EMmiRtVz_FCP--PyypwETFUPuhfUSNc2EYoR6BD9-GUrlCEYbRHoLljyCiMLchlE5C8fT7-erh2LsDAQ6UPDu8jGJhWHXcB0gG6nrHObcLNpxkzesCOELy9QM090XsprYXbmgC234uYFWP7l0Rcu6eq75od24K1J0jGp8N1NWk-8Duv6agCbInnRX5r5cN2R200Rig5Ge-2a4vREqW20HLoRuqmf5IYvP8fT1kMwInXEGauEon5voai94EpmRhEqg-pA73IUImPSJ7nkP9EShdwfUc_mzNFBTbW-EulikA9P7EZ16fhH1Pbmco_aMmgoqgnBK4pN0IQNepV9qJTl7Ku4Uaq8xte7XqFagAWmXArDm_zUZCQ9n2zlDqzl66aGzF1imvHK5s6afhnxuujOM4DHyTAIO2x7OHI6bIhxznRoTa6VNWn7INe_QH-nLFg5tKaQIJeH3xPn_GIU72Hjm4eyYF88Ect8n5pSldsFEKyJJZR-pbZUKaaGZOnZiszZ82r0fV8Lz-qv2Q2Z4VdjNk2mbPlzUbUZ1l5-5qM9Hee9hR2c-1nA_Nsm4rUNIHsoLNGVyoE51hSHevRwIkxZf1YC4Cd7-8yIoqFso49D3XUuhrqrDADezywNeu-_B5aVatmp05giNl_Fk9A8ditUYCjL1g2mUe7hvGX14iydaM2GKJOtNKdR_SEAJH9D1s1BC_f02oHUmCpuvc2FAVKTIXsWtkcEOAdyNNm5fkb6wxPv7e3SBA_xcCKiYgdzBsSluvXfnTfLIVDUZjrtGq0n5Ym1_FP_vh71BHhvcUenVhx_ni0"></a>
+	</section>
+
+
+	<section>
+	<h4>Cronograma Modificado</h4>
+		<a href="https://www.plantuml.com/plantuml/svg/fPL1RzCm5CVl-HJlCeaTAhLfsZ5EgzQ09b5Hri9bsi5ptegPOnVR6IhVXYC73eYFq2_6SvsfTPRI2gGT4Zlx_tv-xpMvi8uPjs3AkKGojQZO0W5jaaoD_epSmMRVGjfDiqwtHt_9qWZbB6SIeTJAVP8h-APr2RqaSRfWAn0Mk9RQO052WMMI7akIcnU3uSafvDPLXT2mWW8jCqPBgUbI0XAf29T4n5jW5cxoyUYsgP2cm5G1abbQ77RXA-A3zKiDi1GbBWoYIa8CxP81FL4k9JeilD9vTqUfG419PpQwq3wfHCC5asXhbzcyuT8ddHsNh7-KYu-XNKB7BcUnYmGhhCEIUIzMVAc45LoiVoj_Rt7zQsis6hz_PfP6PlkhjD2oG4L7Ja8CxPwrcir4MKcsDMYN2qApgyc7Xj4WhbK_EyR8vxGhlHoSd8uQHK699Igdd_hrDfyq98QTtc178isEQLZ8eMrYnXA-B6FXU_7tXgrWQJH7oqhX_NOR2ANGADS_QEe4PxNv-6gMn-QzD2vVcXvJlf0ZV4QB-NIVqolWH17t91Jy4GH5kkrAq9nUlxly3yzGtJg4zjeS9_fH1C6em2NozNSbk0uYa_moUatuMOixJJVxFEuaumz9o6ZHc9eAxmXoBzJs1pTzVHNpcg-2yqCuIcYZvPORuIgpcI79O8vMF8tp_1cIJdKyaWBQYDVuAAplQKrqM-9r_h61p6Bay12I4lQUyauOg1HG-ledh-Hc0esNSQn-gxNoXplyiqFyKRj0qkduwLyXTnhcsZ49dOuVkSpFtEYHAOxW_FfcwfRrexNMV7fRy_lxQpx1GbJbp7yh5s_2fDC_Rboovg3tdbEtpOSm4km9FlzNUEX-Bu9Ve2est_u_"><img src="https://www.plantuml.com/plantuml/svg/fPL1RzCm5CVl-HJlCeaTAhLfsZ5EgzQ09b5Hri9bsi5ptegPOnVR6IhVXYC73eYFq2_6SvsfTPRI2gGT4Zlx_tv-xpMvi8uPjs3AkKGojQZO0W5jaaoD_epSmMRVGjfDiqwtHt_9qWZbB6SIeTJAVP8h-APr2RqaSRfWAn0Mk9RQO052WMMI7akIcnU3uSafvDPLXT2mWW8jCqPBgUbI0XAf29T4n5jW5cxoyUYsgP2cm5G1abbQ77RXA-A3zKiDi1GbBWoYIa8CxP81FL4k9JeilD9vTqUfG419PpQwq3wfHCC5asXhbzcyuT8ddHsNh7-KYu-XNKB7BcUnYmGhhCEIUIzMVAc45LoiVoj_Rt7zQsis6hz_PfP6PlkhjD2oG4L7Ja8CxPwrcir4MKcsDMYN2qApgyc7Xj4WhbK_EyR8vxGhlHoSd8uQHK699Igdd_hrDfyq98QTtc178isEQLZ8eMrYnXA-B6FXU_7tXgrWQJH7oqhX_NOR2ANGADS_QEe4PxNv-6gMn-QzD2vVcXvJlf0ZV4QB-NIVqolWH17t91Jy4GH5kkrAq9nUlxly3yzGtJg4zjeS9_fH1C6em2NozNSbk0uYa_moUatuMOixJJVxFEuaumz9o6ZHc9eAxmXoBzJs1pTzVHNpcg-2yqCuIcYZvPORuIgpcI79O8vMF8tp_1cIJdKyaWBQYDVuAAplQKrqM-9r_h61p6Bay12I4lQUyauOg1HG-ledh-Hc0esNSQn-gxNoXplyiqFyKRj0qkduwLyXTnhcsZ49dOuVkSpFtEYHAOxW_FfcwfRrexNMV7fRy_lxQpx1GbJbp7yh5s_2fDC_Rboovg3tdbEtpOSm4km9FlzNUEX-Bu9Ve2est_u_"></a>
+	</section>
+</section>
+				<!-- <section data-markdown -->
+				<!-- data-separator="^---" -->
+				<!-- data-separator-vertical="^\n" -->
+				<!-- data-separator-notes="^Note:"> -->
+				<!-- <textarea data-template> -->
+<!-- </textarea> -->
+<!-- </section> -->
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>

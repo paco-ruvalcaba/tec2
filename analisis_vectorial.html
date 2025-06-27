@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Análisis Vectorial</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+		<link rel="stylesheet" href="dist/theme/league.css">
+		<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/night.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/moon.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+<!-- A partir de aquí empieza la presentación -->
+				<section>
+					<h3>Análisis Vectorial</h3>
+					<p>
+						<small>Por <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+						</small>
+					</p>
+				</section>
+				
+				<section>
+					<section>
+						<h1 style="color:dodgerblue">Los vectores y la geometría del espacio</h1>
+						<a href="#/1/2"><img src="fl_aba.png" width="20%"></a>
+					</section>
+					<section>
+						<img src="vector1.png" width="15%">
+						<p><a href="#/2">Introducción</a></p>
+						<p><a href="#/3">Sistemas de Coordenadas Tridimensionales</a></p>
+						<p><a href="#/4">Vectores</a></p>
+						<p><a href="#/5">Producto Punto</a></p>
+						<p><a href="#/6">Producto Cruz</a></p>
+						<p><a href="#/7">Rectas y planos en el espacio</a></p>
+						<p><a href="#/8">Cilindros y superficies cuádricas</a></p>
+					</section>
+				</section>
+				
+				<section data-markdown
+				data-separator="^---"
+				data-separator-vertical="^\n"
+				data-separator-notes="^Note:">
+				<textarea data-template>
+# Introducción
+<img src="linea.png" width="25%">
+
+- Para aplicar el cálculo a muchas situaciones reales y en matemáticas avanzadas, necesitamos una descripción matemática del espacio tridimensional.
+
+- En este capítulo presentaremos los sistemas de coordenadas y los vectores tridimensionales.
+- Con base en nuestros conocimientos acerca de las coordenadas en el plano $xy$, estableceremos coordenadas en el espacio agregando un tercer eje que mide la distancia hacia arriba y hacia abajo del plano $xy$.
+
+- Los vectores se usan para estudiar la geometría analítica del espacio, donde ofrecen maneras simples de describir líneas, planos, superficies y curvas en el espacio.
+
+- Usaremos estas ideas geométricas más adelante para estudiar el movimiento en el espacio y el cálculo de funciones de varias variables, con diversas aplicaciones importantes en ciencias, ingeniería, economía y matemáticas avanzadas.
+---
+<h1 style="color:goldenrod">Sistemas de coordenadas tridimensionales</h1>
+
+### Regla de la mano derecha
+<img src="mano_der4.png" width="25%">
+
+Para localizar un punto en el espacio, utilizamos tres ejes coordenados mutuamente perpendiculares, dispuestos como en la figura.
+<br><img src="ejes_cor.png" width="25%"><br>
+Los ejes allí mostrados forman un sistema coordenado diestro o de mano derecha.
+
+![Sistema coordenado cartesiano que sigue la convención de la mano derecha](screenshot.982.jpg)
+Note:
+- Cuando se sostiene la mano derecha de tal manera que los dedos meñique a índice se curven del eje x positivo hacia al eje y positivo, el dedo pulgar apunta en la dirección del eje z positivo. 
+- Así, cuando se mira hacia abajo al plano xy desde la dirección positiva del eje z, los ángulos positivos en el plano se miden en el sentido contrario al de las manecillas del reloj, a partir del eje x positivo y alrededor del eje z positivo. 
+- (En un sistema de coordenadas de mano izquierda, el eje z positivo apuntaría hacia abajo en la figura 12.1 y los ángulos en el plano son positivos cuando se miden en el sentido de las manecillas del reloj a partir del eje x positivo. Los sistemas de coordenadas de mano derecha y mano izquierda no son equivalentes).
+<!-- <image src="screenshot.982.jpg" width="20%"> -->
+
+![Sistema coordenado cartesiano que sigue la convención de la mano derecha](mano_derecha.svg)
+
+Las coordenadas cartesianas $(x, y, z)$ de un punto $P$ en el espacio son los valores de los cuales los planos que pasano por $P$, perpendiculares a los ejes, <mark>cortan los ejes</mark>.
+
+## Distancia y esferas en el espacio
+<img src="esfera1.png" width="25%">
+---
+# Vectores
+---
+# Producto Punto
+---
+# Producto Cruz
+---
+# Rectas y planos en el espacio
+---
+# Cilindros y superficies cuádricas
+---
+# 
+---
+# 
+---
+
+				</textarea>
+				</section>
+				
+				<section></section>
+				<section></section>
+				<section></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>

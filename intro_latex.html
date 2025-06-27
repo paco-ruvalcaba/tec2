@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introducción a LaTeX</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/league.css"> -->
+		<link rel="stylesheet" href="dist/theme/beige.css">
+		<!-- <link rel="stylesheet" href="dist/theme/night.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/moon.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ...................................................................................  -->
+<!-- .........................Inicio de la presentación.................................  -->
+<!-- ...................................................................................  -->
+<section>
+	<!-- <a href="https://revealjs.com"> -->
+	<!-- <img src="uttlogo.png" alt="UTT Logo" style="background: transparent;" class="demo-logo"> -->
+	<!-- </a> -->
+	<h4>Tema</h4>
+	<h2>Introducción a LaTeX<a href="#footnote-1"><small><small><small>[1]</small></small></small></a>.</h2>
+	<p>
+		<small>Maestro: <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+		</small>
+	</p>
+	<br><br>
+	<small><small><p id="footnote-1">[1] <a href="https://nokyotsu.com/latex/guia.html">Guía rápida de LaTeX</a></p></small></small>
+</section>
+				<section data-markdown
+				data-separator="^---"
+				data-separator-vertical="^\n"
+				data-separator-notes="^Note:">
+				<textarea data-template>
+# ¿Qué es TEX?
+
+- $T_EX$ es un programa destinado a la composición de documentos que contienen texto y fórmulas matemáticas con calidad de imprenta creado por Donald Knuth en 1978
+- Una imprenta y un impresor
+- NO es un editor de texto sino un procesador de <abbr title="En ciencias de la computación, macro ―acortamiento de macroinstrucción― es una serie de instrucciones que se almacenan para que se puedan ejecutar de manera secuencial mediante una sola llamada u orden de ejecución">macros</abbr> y lenguaje de programación
+---
+# ¿Qué es LaTeX?
+
+- LaTeX es un sistema de preparación de documentos.
+- Con él puedes preparar manuscritos, artículos de revista, cartas, tesis, presentaciones y cualquier tipo de documento que quisieras imprimir en papel o mostrar en pantalla.
+- $L^AT_EX$ es un conjunto de macros para $T_EX$ debido originalmente a Leslie Lamport para facilitar el uso de $T_EX$.
+- La Sociedad Matemática Americana añade sus estándares a $L^AT_EX$ : nace$\it{AMS}-L^AT_EX$
+---
+# ¿Por qué debería de usar LaTeX?
+
+- Existiendo otras alternativas más convencionales para producir documentos, como Word de Microsoft, es natural preguntarse porque debería uno tomarse la molestia de aprender a usar LaTeX.
+
+- Calidad profesional de los documentos que puedas generar.
+- Es particularmente cierto para documentos que contengan fórmulas o ecuaciones, pero LaTeX tiene muchas aplicaciones más allá de las matemáticas.
+- Documentos de química, física, computación, biología, leyes, literatura, música, etc.
+- Excelente calidad de imprenta de LaTeX.
+
+Más importante
+- LaTeX te permite claramente separar el contenido y el formato de tu documento.
+- Como científico, investigador o escritor, esto te da la oportunidad de concentrarte en el ‘qué’, en la parte creativa de tu obra, en generar y escribir ideas.
+- Por su parte el sistema se encargará del ‘cómo’ hacer para plasmar esas ideas visualmente en un documento.
+- LaTeX, además, realiza de manera automática muchas tareas que de otro modo podrían resultar tediosas o engorrosas: numerar capítulos y figuras, incluir y organizar la bibliografía adecuada, mantener índices y referencias cruzadas.
+
+- Finalmente, lo que para algunos es también un punto a favor, todo el software que necesitas para editar, producir, ver e imprimir tus documentos es libre.
+- Esto además quiere decir, para los pragmáticos, que para instalar y usar LaTeX en tu computadora no tienes que gastar ni un sólo centavo.
+---
+# ¿Por qué no debería de usar LaTeX?
+
+No uses LaTeX si:
+- **No tienes tiempo para aprenderlo.** No es recomendable tratar de aprender LaTeX para escribir un documento que tienes compromiso de entregar en menos de, digamos, 24 horas.
+- **Ya tienes tu documento escrito.** Es común, por ejemplo, que un estudiante quiera convertir su tesis, ya escrita en Word, al ‘formato’ de LaTeX para que se vea ‘más bonita’. Aunque técnicamente esto es posible, no lo recomiendo pues no es sencillo y los resultados suelen ser de muy mala calidad.
+- **LaTeX es mucho más que un ‘formato’** para guardar documentos, es una herramienta completa cuyas ventajas principales comienzan con en el proceso de crear el documento mismo.
+
+- **Lo que te interesa es el diseño de documentos.** Si tu interés, más que en el contenido está en el diseño visual de los documentos, LaTeX quizá no es la herramienta adecuada para ti. LaTeX como una herramienta de diseño, más bien como una plataforma que los diseñadores podrían usar para crear ‘plantillas’ para documentos con sus propios diseños.
+---
+# ¿Cómo consigo LaTeX?
+
+Según tu sistema operativo lee las instrucciones para Windows, Mac OS X, o Linux. Cualquiera que sea tu sistema vas a necesitar, esencialmente, de los siguientes tres componentes:
+- Un editor de texto. 
+- Una distribución de LaTeX. Este es el motor que se encarga de convertir tu archivos fuente de LaTeX en documentos portables .pdf.
+- Un visor de documentos. Esta es la aplicación que te permite ver e imprimir tus documentos generados por LaTeX.
+---
+# ¿Cómo uso LaTeX?
+
+También preguntado a veces como: ¿Y esto con qué se come?
+
+Ya que has instalado LaTeX, el siguiente paso es aprender a generar un documento. Son tres las operaciones principales que tienes hacer: editar, compilar, y visualizar el documento.
+
+### Editar
+El primer paso consiste en usar tu editor seleccionado para generar un archivo, con terminación .tex, que contiene el código en LaTeX describiendo la estructura y el contenido de tu documento. Consulta el curso de LaTeX donde puedes encontrar un ejemplo sencillo y una introducción al lenguaje de LaTeX.
+
+### Compilar
+Compilar es el proceso, realizado por el motor de LaTeX, que convierte tus archivos .tex en documentos con formato .pdf que se pueden imprimir y ver en pantalla.
+
+### Visualizar
+Una vez compilado el documento, y si no hubieron errores, puedes visualizar el documento generado por LaTeX.
+---
+# Características de LATEX
+
+## Transportabilidad:
+los ficheros .tex sólo contienen texto, son de pequeño tamaño y se pueden manipular en cualquier plataforma.
+## Sistematización:
+LATEX se ocupa del formato del documento. El usuario no tiene que preocuparse (si no quiere) de hacer saltos de
+página, justificaciones, sangrías, referencias cruzadas, índice del documento, etc.
+## Versatilidad:
+esencialmente puede hacer cualquier cosa, los límites están en la imaginación del usuario
+## Flexibilidad: 
+permite al usuario crear nuevos comandos y entornos para facilitar la escritura de los documentos. Además, cualquier comando preexistente puede ser modificado y mejorado.
+
+## Actualización
+LATEX es mejorado constantemente de forma altruista. Se crean y mejoran paquetes que son compartidos como software libre.
+				</textarea>
+				</section>
+
+				<section>
+<h1>Ejemplo de código</h1>
+<pre><code data-line-numbers="1|2|3|4|5|6|7|8|9|10" data-ln-start-from="0">
+\documentclass{article}
+\usepackage{graphicx}
+\title{Título del trabajo}
+\author{Nombre del autor}
+\date{February 2024}
+\begin{document}
+\maketitle
+\section{Introduction}
+\end{document}
+</code></pre>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>
