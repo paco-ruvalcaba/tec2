@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>INFORMÁTICA</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+		<link rel="stylesheet" href="dist/theme/league.css">
+		<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/night.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/moon.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ...................................................................................  -->
+<!-- .........................Inicio de la presentación.................................  -->
+<!-- ...................................................................................  -->
+<section data-background-image="fondo_puntos5.svg"  data-background="white">
+	<!-- <a href="https://revealjs.com"> -->
+	<!-- <img src="uttlogo.png" alt="UTT Logo" style="background: transparent;" class="demo-logo"> -->
+	<!-- </a> -->
+	<h1>ALFABETIZACIÓN INFORMÁTICA</h1>
+	<!-- <h2>Momento de torsión y equilibrio rotacional</h2> -->
+	<p>
+	<small>Maestro: <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+	</small>
+	</p>
+</section>
+<section  data-background-image="fondo_puntos5.svg"  data-background="white">
+	<ul>
+		<li><a href="informatica_1b.html">HISTORIA DE LA AUTOMATIZACIÓN</a></li>
+		<li><a href="informatica_1b.html">HISTORIA DE LAS COMPUTADORAS</a></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</section>
+
+<section data-markdown
+data-separator="^---"
+data-separator-vertical="^\n"
+data-separator-notes="^Nota:">
+<textarea data-template>
+# Presentación: Fundamentos de Lógica y Sistemas Digitales
+## El puente entre el mundo analógico y el procesamiento informático
+
+---
+
+## Contenido de la Sesión
+
+1. Señales Análogas vs. Digitales
+2. El Sistema Binario (El lenguaje de la máquina)
+3. Unidades de Información (Del Bit al Byte en Medicina)
+4. Representación Digital de Datos e Imágenes Médicas
+5. Compuertas Lógicas Básicas (Toma de decisiones)
+6. Ejemplos Prácticos en Contexto Clínico
+
+---
+
+## 1. Señales Análogas vs. Digitales
+
+### **Señal Análoga (Mundo Real)**
+- Es **continua** en el tiempo y en su amplitud.
+- Varía de forma infinita y fluida.
+- *Ejemplo:* El trazo impreso de un Electrocardiograma (EKG) en papel o la lectura de un termómetro de mercurio.
+
+### **Señal Digital (Mundo Informático)**
+- Es **discreta** y toma solo valores numéricos exactos a intervalos de tiempo específicos.
+- *Ejemplo:* La monitorización cardíaca en una pantalla digital que registra valores precisos en 0s y 1s.
+
+> **¿Por qué digitalizar?** Una señal digital no se degrada con la copia, no sufre por interferencias de ruido térmico y puede ser procesada por algoritmos de software.
+
+---
+
+## 2. El Sistema Binario
+
+Las computadoras no entienden letras ni números decimales; solo entienden estados eléctricos.
+
+- **Base física:** El transistor actuando como un interruptor.
+- **Estado 1 (Encendido / ON):** Hay paso de corriente eléctrica.
+- **Estado 0 (Apagado / OFF):** No hay paso de corriente eléctrica.
+
+```text
+  [ Corriente Eléctrica ]  ---> Interruptor Abierto  --->  0 (Apagado)
+  [ Corriente Eléctrica ]  ---> Interruptor Cerrado  --->  1 (Encendido)
+```
+
+Toda la información del mundo (textos, audios, tomografías) se convierte a combinaciones de estos dos estados.
+
+---
+
+## 3. Unidades de Información
+
+### **Bit (Binary Digit)**
+- La unidad mínima de información. Puede tomar únicamente el valor de `0` o `1`.
+
+### **Byte**
+- Grupo de **8 bits** consecutivos (ejemplo: `01000001`).
+- Es la unidad estándar para representar un carácter (una letra, un número o un símbolo).
+
+| Unidad | Equivalencia | Ejemplo en el Entorno Médico |
+| :--- | :--- | :--- |
+| **Bit** | 0 o 1 | Estado de un sensor (Activado / Desactivado) |
+| **Byte** | 8 bits | Un carácter de texto (ej. la letra "A") |
+| **Kilobyte (KB)** | 1,024 Bytes | Un resumen de texto de una nota clínica |
+| **Megabyte (MB)** | 1,024 KB | Una radiografía digitalizada de alta resolución |
+| **Gigabyte (GB)** | 1,024 MB | Una Tomografía Axial Computarizada (TAC) multicorte |
+| **Terabyte (TB)** | 1,024 GB | El archivo histórico de imágenes de un hospital |
+
+---
+
+## 4. ¿Cómo se Representa la Información Médica?
+
+### **Texto y Datos Clínicos**
+Cada letra se traduce a un número binario usando estándares internacionales (como ASCII o Unicode).
+- Letra `A` = `01000001`
+
+### **Imágenes Médicas (Pixeles y Tonalidad)**
+- La imagen (ej. una radiografía) se divide en una cuadrícula de pequeños puntos llamados **pixeles**.
+- Cada píxel guarda un valor numérico binario que determina su brillo/color:
+  - **Estructura densa (hueso):** Alto valor numérico $
+ightarrow$ Blanco.
+  - **Tejido blando:** Valor intermedio $
+ightarrow$ Escala de grises.
+  - **Espacio aéreo (pulmón):** Valor cero o bajo $
+ightarrow$ Negro.
+
+---
+
+## 5. Compuertas Lógicas Básicas
+
+Son circuitos electrónicos simples que evalúan condiciones (0s y 1s de entrada) para generar un resultado (0 o 1 de salida).
+
+### **1. Compuerta NOT (Inversor)**
+- **Regla:** Invierte la señal que recibe.
+- Si entra `1`, sale `0`. Si entra `0`, sale `1`.
+
+### **2. Compuerta AND (Y)**
+- **Regla:** La salida es `1` **únicamente si TODAS** las entradas son `1`.
+- Si alguna entrada es `0`, la salida será `0`.
+
+### **3. Compuerta OR (O)**
+- **Regla:** La salida es `1` **si AL MENOS UNA** de las entradas es `1`.
+- Solo da `0` si todas las entradas son `0`.
+
+---
+
+## 6. Ejemplos Prácticos en Equipamiento Médico
+
+### **Compuerta AND: Seguridad en Desfibrilador**
+Para aplicar una descarga automática se requieren dos condiciones simultáneas:
+- *Condición A:* El sensor detecta Fibrilación Ventricular (`1`).
+- *Condición B:* El operador presiona el botón de descarga (`1`).
+- **Resultado:** **Descarga efectuada (`1`)**. Si alguna condición falta (`0`), no se dispara.
+
+### **Compuerta OR: Sistema de Alarmas en Unidad de Cuidado Intensivo**
+El monitor emite una señal sonora de emergencia si:
+- *Condición A:* Frecuencia cardíaca $> 120$ bpm (`1`).
+- *Condición B:* Saturación de oxígeno $< 90\%$ (`1`).
+- **Resultado:** **Alarma activada (`1`)**. Basta con que se cumpla una de las dos condiciones.
+
+---
+
+## Cuadro Sintético: Del Pulso Eléctrico a la Decisión
+
+| Nivel | Elemento | Función |
+| :--- | :--- | :--- |
+| **Físico** | Transistor | Conmuta corriente (pasa / no pasa) |
+| **Lógico** | Bit y Sistema Binario | Representa los estados `1` y `0` |
+| **Estructural** | Compuertas Lógicas | Evalúan condiciones (AND, OR, NOT) |
+| **Funcional** | Unidad Aritmético-Lógica (ALU) | Agrupa compuertas para realizar cálculos complejos |
+</textarea>
+</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				<!-- background: '#5a8780',         // color de fondo global -->
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>
+

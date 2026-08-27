@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>INFORMÁTICA</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+		<link rel="stylesheet" href="dist/theme/league.css">
+		<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/night.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/moon.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ...................................................................................  -->
+<!-- .........................Inicio de la presentación.................................  -->
+<!-- ...................................................................................  -->
+<section data-background-image="fondo_puntos5.svg"  data-background="white">
+	<!-- <a href="https://revealjs.com"> -->
+	<!-- <img src="uttlogo.png" alt="UTT Logo" style="background: transparent;" class="demo-logo"> -->
+	<!-- </a> -->
+	<h1>ALFABETIZACIÓN INFORMÁTICA</h1>
+	<!-- <h2>Momento de torsión y equilibrio rotacional</h2> -->
+	<p>
+	<small>Maestro: <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+	</small>
+	</p>
+</section>
+<section  data-background-image="fondo_puntos5.svg"  data-background="white">
+	<ul>
+		<li><a href="informatica_1b.html">HISTORIA DE LA AUTOMATIZACIÓN</a></li>
+		<li><a href="informatica_1b.html">HISTORIA DE LAS COMPUTADORAS</a></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</section>
+
+<section data-markdown
+data-separator="^---"
+data-separator-vertical="^\n"
+data-separator-notes="^Nota:">
+<textarea data-template>
+# Arquitectura de Computadoras
+### Conceptos fundamentales de hardware y organización del sistema
+
+---
+
+## Contenido de la Sesión
+
+1. ¿Qué es la Arquitectura de Computadoras?
+2. El Procesador (CPU) y sus subcomponentes
+3. Jerarquía y tipos de Memoria
+4. Conexión y Transporte: Tarjeta Madre y Buses
+5. Periféricos de Entrada y Salida (E/S)
+6. Fuente de Alimentación
+7. Resumen General
+
+---
+
+## ¿Qué es la Arquitectura de Computadoras?
+
+Es la **organización y conexión física** de los componentes internos de un equipo informático.
+
+- **Propósito:** Recibir, procesar, almacenar y entregar información de forma eficiente.
+- **Funcionamiento:** Todos los componentes se coordinan mediante impulsos eléctricos y código binario.
+
+---
+
+## 1. El Procesador (CPU)
+
+La **CPU (Unidad Central de Procesamiento)** es el componente central encargado de:
+- Ejecutar las instrucciones de los programas.
+- Realizar operaciones de cálculo.
+- Controlar el flujo general de información.
+
+---
+
+## Componentes Internos de la CPU
+
+- **Unidad de Control (UC):**
+  - Coordina las acciones del sistema.
+  - Lee las instrucciones de la memoria y determina qué componente debe ejecutarlas y en qué orden.
+- **Unidad Aritmético-Lógica (ALU):**
+  - Realiza operaciones matemáticas (sumas, restas) y comparaciones lógicas (mayor, menor, igual).
+- **Registros:**
+  - Pequeñas celdas de memoria de alta velocidad dentro de la CPU.
+  - Guardan temporalmente el dato exacto que se calcula en un instante preciso.
+
+---
+
+## 2. Sistemas de Memoria
+
+La computadora organiza la memoria según la **velocidad requerida** y la **permanencia** de los datos.
+
+```
++-------------------------------------------------------+
+|  Memoria Caché  (Ultra rápida / Capacidad muy pequeña)|
++-------------------------------------------------------+
+|  Memoria RAM    (Muy rápida / Volátil / Temporal)     |
++-------------------------------------------------------+
+|  SSD / Disco Duro (Velocidad moderada / Permanente)   |
++-------------------------------------------------------+
+```
+
+---
+
+## Memoria RAM vs. Almacenamiento Secundario
+
+### **Memoria RAM**
+- Espacio de trabajo de alta velocidad.
+- Almacena las aplicaciones y datos abiertos en el momento.
+- **Volátil:** Su contenido se borra por completo al apagar el equipo.
+
+### **Almacenamiento Secundario (SSD / HDD)**
+- Guarda programas, archivos y el sistema operativo.
+- **No volátil:** Conserva la información de forma permanente.
+- *SSD (Estado Sólido):* Chips flash rápidos.
+- *HDD (Disco Mecánico):* Platos magnéticos tradicionales.
+
+---
+
+## Memoria Caché
+
+- Memoria de capacidad reducida y **acceso ultra rápido**.
+- Ubicada directamente en el encapsulado de la CPU.
+- **Función:** Guarda copias de los datos de la RAM que el procesador utiliza repetidamente para evitar tiempos de espera.
+
+---
+
+## 3. Conexión y Transporte
+
+### **Tarjeta Madre (Motherboard)**
+- Placa de circuito impreso principal.
+- Contiene los zócalos y conectores para la CPU, RAM, almacenamiento y tarjetas de expansión.
+- Distribuye energía eléctrica y señales entre todos los componentes.
+
+---
+
+## Los Buses del Sistema
+
+Son pistas electrónicas y cables por donde viajan los datos mediante impulsos eléctricos.
+
+- **Bus de Datos:** Traslada la información procesada o a procesar.
+- **Bus de Direcciones:** Indica la posición exacta en memoria a la que se desea acceder.
+- **Bus de Control:** Transmite órdenes de operación (lectura, escritura, interrupción).
+
+---
+
+## 4. Dispositivos de Entrada y Salida (E/S)
+
+Permiten el intercambio de información entre el usuario y el equipo.
+
+- **Entrada (Input):** Capturan datos externos (Teclado, ratón, micrófono, escáner).
+- **Salida (Output):** Despliegan datos procesados (Monitor, impresora, altavoces).
+- **Mixtos:** Envían y reciben información (Pantallas táctiles, memorias USB, tarjetas Wi-Fi).
+
+---
+
+## 5. Fuente de Alimentación
+
+- Toma la corriente eléctrica alterna (AC) de la toma de pared.
+- La transforma en **corriente directa (DC)** continua de bajo voltaje.
+- Distribuye energía regulada a la tarjeta madre y a cada componente interno.
+
+---
+
+## Cuadro Resumen de Componentes
+
+| Componente | Función Principal | Operación / Retención |
+| :--- | :--- | :--- |
+| **CPU** | Ejecutar instrucciones y procesar datos | Operación lógica/matemática |
+| **Memoria RAM** | Cargar programas en ejecución | Volátil (se borra sin energía) |
+| **SSD / HDD** | Guardar información permanente | No volátil |
+| **Tarjeta Madre** | Interconectar el hardware | Canalización de circuitos |
+| **Buses** | Trasladar datos y órdenes | Impulsos eléctricos |
+| **Periféricos E/S** | Interacción usuario-sistema | Captura o muestra de datos |
+
+---
+
+### Fin de la presentación
+# ¿Preguntas o Dudas?
+</textarea>
+</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				<!-- background: '#5a8780',         // color de fondo global -->
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>
+
