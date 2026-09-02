@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>CONTROL ELÉCTRICO</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/league.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
+		<link rel="stylesheet" href="dist/theme/night.css">
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/moon.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ...................................................................................  -->
+<!-- .........................Inicio de la presentación.................................  -->
+<!-- ...................................................................................  -->
+<section>
+	<!-- <a href="https://revealjs.com"> -->
+	<!-- <img src="uttlogo.png" alt="UTT Logo" style="background: transparent;" class="demo-logo"> -->
+	<!-- </a> -->
+	<h4>Tema 1.1:</h4>
+	<h2>Contactores y Arrancadores</h2>
+	<p>
+	<small>Maestro: <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+	</small>
+	</p>
+</section>
+
+<section data-markdown
+data-separator="^---"
+data-separator-vertical="^\n"
+data-separator-notes="^Note:">
+<textarea data-template>
+## 1. ¿Qué es un Contactor?
+
+Un **contactor** es un componente electromecánico diseñado para establecer o interrumpir el paso de corriente eléctrica [2].
+
+![](contactor.avif)
+
+*   **Campos de aplicación**: Puede actuar tanto en el circuito de potencia como en el de mando tan pronto como se energice su bobina [2].
+*   **Funcionamiento a distancia**: Permite el accionamiento del receptor desde ubicaciones remotas [2].
+
+*   **Operación "Todo o Nada"**: Posee dos posiciones de funcionamiento [2]:
+    1.  *Estable o de reposo*: Cuando no recibe señal eléctrica el circuito de mando [2].
+    2.  *Inestable*: Cuando la acción del circuito de mando entra en juego [2].
+*   **Simbología eléctrica**: Se representa bajo las letras **KM** seguidas de su número de orden correspondiente [2].
+
+[Funcionamiento](https://youtube.com/shorts/Pw6mFD18IOg?si=eb26SP1aNWQw8e0c)
+---
+# Partes
+
+![](partes.avif)
+---
+### 2. Estructura Física: Soporte y Actuador
+
+Todo contactor se compone de elementos mecánicos y eléctricos clave montados sobre una estructura sólida:
+
+*   **Carcasa**: Soporte rígido fabricado de material no conductor [3]. Tolera niveles de calor no extremos y sirve de base fija para todos los componentes conductores [3].
+*   **Electroimán**: El elemento motor del contactor [3]. Está constituido por un circuito magnético y una bobina, cuya función es transformar la energía eléctrica en fuerza mecánica mediante la generación de un campo magnético muy intenso [3].
+---
+## 3. La Bobina y el Comportamiento de Corriente
+
+La bobina es un arrollamiento de alambre de cobre muy delgado con un elevado número de espiras [4].
+
+*   **Energización**: Al aplicarle tensión, genera un campo electromagnético superior a la resistencia de los resortes internos, juntando el núcleo y la armadura [4].
+*   **Corriente de Llamada**: Cuando se alimenta con corriente alterna (C.A.), la intensidad inicial absorbida es muy elevada debido a que inicialmente solo se cuenta con la resistencia del conductor [4, 5].
+
+*   **Corriente de Mantenimiento**: Al juntarse estrechamente el núcleo con la armadura, aumenta la impedancia de la bobina, disminuyendo la corriente a un valor de trabajo o mantenimiento mucho menor [5].
+*   **Terminales**: Las conexiones físicas de la bobina se identifican como **A1** y **A2** [5].
+---
+## 4. Núcleo, Armadura y Espira de Sombra
+
+*   **Núcleo**: Elemento fijo de material ferromagnético (generalmente en forma de "E") fijado a la carcasa [6]. Su objetivo es concentrar y amplificar el flujo magnético generado por la bobina central para atraer de forma eficiente la parte móvil [6].
+*   **Espira de Sombra**: Elemento metálico situado en el circuito magnético del núcleo [6]. Crea un flujo magnético auxiliar desfasado 120° con respecto al flujo principal [6]. Esto evita ruidos, vibraciones mecánicas y asegura que la armadura permanezca atraída firmemente sin parpadeos [6].
+
+*   **Armadura**: Elemento móvil con construcción similar al núcleo pero sin espiras de sombra [7]. Su función es cerrar el circuito eléctrico cuando se energiza la bobina [7].
+*   **Muelle / Resorte de Retorno**: Muelle que separa mecánicamente la armadura del núcleo en estado de reposo (distancia llamada "cota de llamada") [7]. Permite aperturas rápidas en un intervalo de unos 10 milisegundos [7, 13].
+---
+## 5. El Sistema de Contactos (Fuerza y Auxiliares)
+
+Conductores encargados de conectar o desconectar el paso de corriente al actuar la bobina [8]:
+
+*   **Contactos Principales**: Destinados específicamente a establecer o interrumpir el circuito principal de potencia, transportando la corriente desde la red de alimentación hasta la carga (motor) [9]. Simbología: Se referencian secuencialmente con cifras de un solo dígito del **1 al 6** [9].
+*   **Contactos Auxiliares**: Dimensionados exclusivamente para intensidades muy pequeñas (mando, señalización o realimentación) [9]. Pueden ser instantáneos, temporizados, de apertura lenta o de apertura positiva [10].
+---
+## 6. Simbología Numérica de Contactos Auxiliares
+
+La codificación de los contactos auxiliares consta de dos cifras [11]:
+
+*   **Dígito de las Unidades (Función)** [11]:
+    *   **1 y 2**: Contacto Normalmente Cerrado (**NC**) [11].
+    *   **3 y 4**: Contacto Normalmente Abierto (**NA / NO**) [11].
+    *   **5 y 6**: Contacto NC con funciones especiales (temporización o protección térmica) [11].
+    *   **7 y 8**: Contacto NA con funciones especiales (temporización o protección de circuito) [11].
+
+*   **Dígito de las Decenas**: Representa el número de orden jerárquico que ocupa el contacto auxiliar dentro del bloque del contactor [11]. 
+*   **Identificación lateral**: Se indica siempre a qué contactor específico (**KM**) pertenece el contacto [11].
+---
+## 7. Funcionamiento Mecánico y Conexiones Prácticas
+
+*   **Maniobra de Cierre**: Al excitar la bobina, el movimiento del núcleo arrastra consigo la armadura móvil, operando simultáneamente todos los polos principales y contactos auxiliares [14]. Este arrastre puede realizarse por *rotación (eje pivote)*, *traslación (deslizamiento)* o una *combinación de ambos movimientos* [14].
+*   **Maniobra de Apertura**: Al desenergizar, los contactos retornan velozmente a su posición estable gracias al resorte de presión de los polos y al resorte de retorno de la armadura [14].
+
+*   **Control Multipunto**: Si se desea maniobrar un motor desde diferentes estaciones físicas, las normas de diseño exigen que los **pulsadores de marcha (NA) se conecten en paralelo** y los **pulsadores de parada (NC) en serie** [14].
+---
+## 8. El Relé Térmico (Protección de Sobrecarga)
+
+Elemento de seguridad ubicado en el circuito de potencia cuya finalidad es proteger al motor contra corrientes de sobrecarga prolongadas [11].
+
+*   **Principio Físico**: Se basa en la deformación por calor de láminas denominadas **bimetales** [11].
+*   **Constitución del Bimetal**: Formado por dos metales con coeficientes de dilatación térmica muy diferentes, unidos rígidamente mediante soldadura de punto [12].
+
+*   **Operación**: El calor de la corriente que fluye al motor se transmite al bimetal mediante una resistencia arrollada a su alrededor [12]. Al presentarse una sobrecarga, el bimetal se curva, desplazando una placa de fibra que acciona contactos auxiliares asociados para interrumpir el paso de corriente a la bobina del contactor principal [11, 12]. El tiempo de disparo es inversamente proporcional a la magnitud de la corriente [12].
+---
+# Funcionamiento
+
+![](func.avif)
+
+Los contactos principales se conectan al circuito que se quiere gobernar. Asegurando el establecimiento y cortes de las corrientes principales y según el número de vías de paso de corriente podrá ser bipolar, tripolar, tetrapolar, etc. realizándose las maniobras simultáneamente en todas las vías.
+
+Los contactos auxiliares son de dos clases: abiertos, NA, y cerrados, NC. Estos forman parte del circuito auxiliar del contactor y aseguran las autoalimentaciones , los mandos, enclavamientos de contactos y señalizaciones en los equipos de automatismo.
+
+Cuando la bobina del contactor queda excitada por la circulación de la corriente, esta mueve el núcleo en su interior y arrastra los contactos principales y auxiliares, estableciendo a través de los polos, el circuito entre la red y el receptor. Este arrastre o desplazamiento puede ser:
+
+- Por rotación, pivote sobre su eje.
+- Por traslación, deslizándose paralelamente a las partes fijas.
+
+### Combinación de movimientos, rotación y traslación.
+
+Cuando la bobina deja de ser alimentada, abre los contactos por efecto del resorte de presión de los polos y del resorte de retorno de la armadura móvil.Si se debe gobernar desde diferentes puntos, los pulsadores de marcha se conectan en paralelo y el de parada en serie.
+---
+## 9. Arrancadores para Motores de Corriente Alterna
+
+El arrancador es el conjunto de dispositivos encargados de gobernar el arranque, paro y control de un motor:
+
+*   **Arrancadores Electrónicos (Suaves)**: Equipos tiristorizados que regulan de manera efectiva la tensión y la corriente eléctrica en las tres fases del motor asíncrono, permitiendo controlar con precisión el par torsional [15].
+
+*   **Aplicaciones críticas**: Se recomiendan cuando es imperativo [16]:
+    1.  Reducir caídas de tensión y limitar picos de corriente transitorios en la línea de distribución [16].
+    2.  Limitar los pares de arranque para proteger la integridad de las cargas [16].
+    3.  Lograr aceleraciones, desaceleraciones o frenados sumamente suaves [16].
+    4.  Arrancar máquinas con momentos de inercia muy elevados [16].
+---
+## 10. Clasificación de Arrancadores y Controles
+
+![](arrancador.avif)
+
+Los arrancadores electrónicos son equipos electrónicos tiristorizados que, mediante el control de las tres fases del motor asíncrono, regulan la tensión y la corriente durante su arranque y  parada, realizando un control efectivo del par.
+
+Los sensores de corriente incorporados le envían información al microprocesador, para regular el par ante las diferentes condiciones de carga y proteger al motor de sobrecargas.Laprotección térmica está integrada en el arrancador.
+
+Se recomienda utilizar un arrancador progresivo cuan necesario :
+- Reducir los picos de corriente y eliminar las caídas de tensión en la línea.
+- Reducir los pares de arranque.
+- Acelerar, desacelerar o frenar suavemente, para la seguridad de las     personas u objetos transportados.
+
+- Arrancar máquinas progresivamente, en especial aquellas de fuerte inercia,
+- Adaptar fácilmente el arrancador a las máquinas especiales.
+- Proteger al motor y a la máquina con un sistema de protección muy completo.
+- Supervisar y controlar el motor en forma remota.
+---
+# CLASIFICACIÓN
+
+![](arranca.avif)
+
+Los arrancadores y controles de motores se categorizan formalmente bajo los siguientes criterios [16, 17]:
+
+*   **Por su forma de funcionamiento**: Manuales o automáticos [17].
+*   **Por su construcción física**: Arrancadores de placa (frontal) o de tambor rotativo [17].
+*   **Por el tipo de cubierta**: Abiertos (para montaje en paneles) o protegidos (con gabinete de protección) [17].
+*   **Por sus terminales de conexión**: Clasificados según el número de conductores que van hacia el motor, distinguiéndose arrancadores de contacto doble, triple o cuádruple [17].
+---
+## 11. Arrancadores de Contacto Triple para Motores CC
+
+El **arrancador de tres puntos o contacto triple** se emplea históricamente para controlar motores de corriente continua (C.C.) pequeños y grandes de tipo derivación (shunt) y compuesto (compound) [17].
+
+*   **Origen del nombre**: Debe su designación a las tres conexiones físicas obligatorias que deben cablearse entre el dispositivo y las terminales del motor [17].
+*   **Funcionamiento Manual**: El operador manipula una manivela o brazo móvil sobre botones de contacto de un reóstato, cortocircuitando secciones de una resistencia de arranque en serie con la armadura [18].
+
+*   **Sujeción Magnética**: Al final de la carrera, un electroimán alimentado por el campo de derivación mantiene el brazo atraído [18]. Si la tensión cae o el campo se abre, un resorte espiral regresa el brazo automáticamente a la posición de apagado (ofreciendo protección intrínseca) [18].
+*   **Limitación de Corriente**: El resistor limita la corriente de arranque a un máximo del **150%** de la corriente de armadura a plena carga [18].
+</textarea>
+</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>
