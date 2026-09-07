@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>CONTROL ELÉCTRICO</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/league.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
+		<link rel="stylesheet" href="dist/theme/night.css">
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/moon.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ...................................................................................  -->
+<!-- .........................Inicio de la presentación.................................  -->
+<!-- ...................................................................................  -->
+<section>
+	<!-- <a href="https://revealjs.com"> -->
+	<!-- <img src="uttlogo.png" alt="UTT Logo" style="background: transparent;" class="demo-logo"> -->
+	<!-- </a> -->
+	<h4>Tema 1.1:</h4>
+	<h2>Contactores y Arrancadores</h2>
+	<p>
+	<small>Maestro: <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+	</small>
+	</p>
+</section>
+
+<section data-markdown
+data-separator="^---"
+data-separator-vertical="^\n"
+data-separator-notes="^Note:">
+<textarea data-template>
+## El Contactor
+
+Un contactor es un componente electromecánico que tiene por objetivo establecer o interrumpir el paso de corriente, ya sea en el circuito de potencia o en el circuito de mando, tan pronto se dé tensión a la bobina (en el caso de ser contactores instantáneos). 
+
+![](https://static.wixstatic.com/media/9d17e0_2ae9cb45c04943679d00b150057cbb67.jpg/v1/fill/w_269,h_281,al_c,lg_1,q_80,enc_avif,quality_auto/9d17e0_2ae9cb45c04943679d00b150057cbb67.jpg)
+
+Un contactor es un dispositivo con capacidad de cortar la corriente eléctrica de un receptor o instalación, con la posibilidad de ser accionado a distancia, que tiene dos posiciones de funcionamiento: una estable o de reposo, cuando no recibe acción alguna por parte del circuito de mando, y otra inestable, cuando actúa dicha acción. Este tipo de funcionamiento se llama de "todo o nada". En los esquemas eléctricos, su simbología se establece con las letras KM seguidas de un número de orden.
+---
+# Partes
+
+![](https://static.wixstatic.com/media/9d17e0_894c3e46825149b2a1571ee45a89cefe.jpg/v1/fill/w_918,h_522,al_c,q_85,enc_avif,quality_auto/9d17e0_894c3e46825149b2a1571ee45a89cefe.jpg)
+
+## Carcasa
+
+Es el soporte fabricado en material no conductor que posee rigidez y soporta el calor no extremo, sobre el cual se fijan todos los componentes conductores al contactor. Además es la presentación visual del contactor.
+
+## Electroimán
+
+Es el elemento motor del contactor, compuesto por una serie de dispositivos, los más importantes son el circuito magnético y la bobina; su finalidad es transformar la energía eléctrica en magnetismo, generando así un campo magnético muy intenso, que provocará un movimiento mecánico.
+
+## Bobina
+
+Es un arrollamiento de alambre de cobre muy delgado con un gran número de espiras, que al aplicársele tensión genera un campo magnético. Éste a su vez produce un campo electromagnético, superior al par resistente de los muelles, que a modo de resortes separan la armadura del núcleo, de manera que estas dos partes pueden juntarse estrechamente. Cuando una bobina se alimenta con corriente alterna la intensidad absorbida por esta, denominada corriente de llamada, es relativamente elevada, debido a que en el circuito solo se tiene la resistencia del conductor.
+
+Esta corriente elevada genera un campo magnético intenso, de manera que el núcleo puede atraer a la armadura y a la resistencia mecánica del resorte o muelle que los mantiene separados en estado de reposo. Una vez que el circuito magnético se cierra, al juntarse el núcleo con la armadura, aumenta la impedancia de la bobina, de tal manera que la corriente de llamada se reduce, obteniendo así una corriente de mantenimiento o de trabajo más baja. Se hace referencia a las bobinas de la siguiente forma: A1 y A2. Siempre y cuando este supervisado por un ingeniero debidamente capacitado.
+
+## Núcleo
+
+Es una parte metálica, de material ferromagnético, generalmente en forma de E, que va fijo en la carcasa.Su función es concentrar y aumentar el flujo magnético que genera la bobina (colocada en la columna central del núcleo), para atraer con mayor eficiencia la armadura.
+
+## Espira de sombra Forma parte del circuito magnético, situado en el núcleo de la bobina, y su misión es crear un flujo magnético auxiliar desfasado 120° con respecto al flujo principal, capaz de mantener la armadura atraída por el núcleo evitando así ruidos y vibraciones.
+
+Espira de sombra 
+
+Forma parte del circuito magnético, situado en el núcleo de la bobina, y su misión es crear un flujo magnético auxiliar desfasado 120° con respecto al flujo principal, capaz de mantener la armadura atraída por el núcleo evitando así ruidos y vibraciones.
+
+## Armadura
+
+Elemento móvil, cuya construcción es similar a la del núcleo, pero sin espiras de sombra. Su función es cerrar el circuito eléctrico una vez energizadas la bobinas, ya que debe estar separado del núcleo, por acción de un muelle. Este espacio de separación se denomina cota de llamada.
+
+Las características del muelle permiten que, tanto el cierre como la apertura del circuito magnético, se realicen de forma muy rápida, alrededor de unos 10 mili segundos. Cuando el par resistente del muelle es mayor que el par electromagnético, el núcleo no logrará atraer a la armadura o lo hará con mucha dificultad. Por el contrario, si el par resistente del muelle es demasiado débil, la separación de la armadura no se producirá con la rapidez necesaria.
+---
+## Contactos
+
+Son elementos conductores que tienen por objeto establecer o interrumpir el paso de corriente en cuanto la bobina se energice. Todo contacto está compuesto por tres conjuntos de elementos:
+
+Dos partes fijas ubicadas en la coraza y una parte móvil colocada en la armadura para establecer o interrumpir el paso de la corriente entre las partes fijas. El contacto móvil lleva el mencionado resorte que garantiza la presión y por consiguiente la unión de las tres partes.
+
+**Contactos principales:** su función es establecer o interrumpir el circuito principal, consiguiendo así que la corriente se transporte desde la red a la carga. Simbología: se referencian con una sola cifra del 1 al 6.
+
+**Contactos auxiliares:** son contactos cuya función específica es permitir o interrumpir el paso de la corriente a las bobinas de los contactores o los elementos de señalización, por lo cual están dimensionados únicamente para intensidades muy pequeñas. Los tipos más comunes son:
+
+**Instantáneos:** actúan tan pronto se energiza la bobina del contactor, se encargan de abrir y cerrar el circuito.
+
+**Temporizados:** actúan transcurrido un tiempo determinado desde que se energiza la bobina (temporizados a la conexión) o desde que se desenergiza la bobina (temporizados a la desconexión).
+
+**De apertura lenta:** el desplazamiento y la velocidad del contacto móvil es igual al de la armadura.
+
+**De apertura positiva:** los contactos cerrados y abiertos no pueden coincidir cerrados en ningún momento.
+
+En su simbología aparecen con dos cifras donde la unidad indica:
+· 1 y 2, contacto normalmente cerrados, NC.
+· 3 y 4, contacto normalmente abiertos, NA.
+· 5 y 6, contacto NC de apertura temporizada o de protección.
+· 7 y 8, contacto NA de cierre temporizado o de protección.
+
+por su parte, la cifra de las decenas indica el número de orden de cada contacto en el contactor. En un lado se indica a qué contactor pertenece.
+
+## Relé térmico
+
+El relé térmico es un elemento de protección que se ubica en el circuito de potencia, contra sobrecargas. Su principio de funcionamiento se basa en la deformación de ciertos elementos, bimetales, bajo el efecto de la temperatura, para accionar, cuando este alcanza ciertos valores, unos contactos auxiliares que desactiven todo el circuito y energicen al mismo tiempo un elemento de señalización.
+
+El bimetal está formado por dos metales de diferente coeficiente de dilatación y unidos firmemente entre sí, regularmente mediante soldadura de punto. El calor necesario para curvar o reflexionar la lámina bimetálica es producida por una resistencia, arrollada alrededor del bimetal, que está cubierto con asbesto, a través de la cual circula la corriente que va de la red al motor.
+
+Los bimetales comienzan a curvarse cuando la corriente sobrepasa el valor nominal para el cual han sido dimensionados, empujando una placa de fibra hasta que se produce el cambio de estado de los contactos auxiliares que lleva. El tiempo de desconexión depende de la intensidad de la corriente que circule por las resistencias.
+
+## Resorte
+
+Es un muelle encargado de devolver los contactos a su posición de reposo una vez que cesa el campo magnético de las bobinas.
+---
+# Funcionamiento
+
+![](https://static.wixstatic.com/media/9d17e0_2c85e0c6d15f47c58c3a2f5c7dc88656.jpg/v1/fill/w_600,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9d17e0_2c85e0c6d15f47c58c3a2f5c7dc88656.jpg)
+
+Los contactos principales se conectan al circuito que se quiere gobernar. Asegurando el establecimiento y cortes de las corrientes principales y según el número de vías de paso de corriente podrá ser bipolar, tripolar, tetrapolar, etc. realizándose las maniobras simultáneamente en todas las vías.
+
+Los contactos auxiliares son de dos clases: abiertos, NA, y cerrados, NC. Estos forman parte del circuito auxiliar del contactor y aseguran las autoalimentaciones , los mandos, enclavamientos de contactos y señalizaciones en los equipos de automatismo.
+
+Cuando la bobina del contactor queda excitada por la circulación de la corriente, esta mueve el núcleo en su interior y arrastra los contactos principales y auxiliares, estableciendo a través de los polos, el circuito entre la red y el receptor. Este arrastre o desplazamiento puede ser:
+- Por rotación, pivote sobre su eje.
+- Por traslación, deslizándose paralelamente a las partes fijas.
+- Combinación de movimientos, rotación y traslación.
+
+Cuando la bobina deja de ser alimentada, abre los contactos por efecto del resorte de presión de los polos y del resorte de retorno de la armadura móvil.Si se debe gobernar desde diferentes puntos, los pulsadores de marcha se conectan en paralelo y el de parada en serie.
+---
+# ARRANCADORES.
+
+Los arrancadores electrónicos son equipos electrónicos tiristorizados que, mediante el control de las tres fases del motor asíncrono, regulan la tensión y la corriente durante su arranque y  parada, realizando un control efectivo del par.
+
+Los sensores de corriente incorporados le envían información al microprocesador, para regular el par ante las diferentes condiciones de carga y proteger al motor de sobrecargas.Laprotección térmica está integrada en el arrancador.
+
+Se recomienda utilizar un arrancador progresivo cuan necesario :
+- Reducir los picos de corriente y eliminar las caídas de tensión en la línea.
+- Reducir los pares de arranque.
+- Acelerar, desacelerar o frenar suavemente, para la seguridad de las     personas u objetos transportados.
+
+- Arrancar máquinas progresivamente, en especial aquellas de fuerte inercia,
+- Adaptar fácilmente el arrancador a las máquinas especiales.
+
+- Proteger al motor y a la máquina con un sistema de protección muy completo.
+- Supervisar y controlar el motor en forma remota.
+
+
+</textarea>
+</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>
