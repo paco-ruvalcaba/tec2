@@ -130,6 +130,76 @@ Nota:
 **Simulación de un proyecto de inversión.** Existen en la práctica una gran cantidad de proyectos de inversión donde la incertidumbre con respecto a los flujos de efectivo que el proyecto genera a las tasas de interés, a las tasas de inflación, etc., hacen dificil y a veces imposible manejar analíticamente este tipo de problemas. Para este tipo de situaciones el uso de simulación es ampliamente recomendado.<br>
 **Simulación de sistemas económicos**. La técnica de simulación puede ser utilizada para evaluar el efecto de cierto tipo de decisiones (devaluación de la moneda, el impuesto al valor agregado, etc.), en las demás variables macroeconómicas como: producto nacional bruto, balanza comercial, inflación, oferta monetaria, circulante, etc.<br>
 **Simulación de estados financieros**. La expansión y diversificación de una organización a través de la adquisición y establecimiento de nuevas empresas, repercuten significativamente en su posición y estructura financiera. Por consiguiente, el uso de simulación permite analizar cuál de las estrategias de crecimiento son las que llevarán a la organización al logro de sus objetivos y metas de corto, mediano y largo plazos.<br>
+---
+<!-- .slide: data-background="slategray" -->
+# Diseño y optimización de líneas de producción industrial
+
+El objetivo principal de esta unidad es enseñar a modelar, analizar y mejorar el flujo de trabajo dentro de una planta o fábrica antes de implementarlo físicamente, minimizando costos y eliminando cuellos de botella.
+
+## Elementos de un sistema
+
+- **Entidades:** Las materias primas, piezas o productos que avanzan por la línea.
+- **Procesos de arribo:** El ritmo e intervalo con el que entran los materiales al sistema.
+- **Recursos y equipos**: Maquinaria, herramientas y personal disponible, definiendo sus capacidades máximas.
+- **Líneas de espera (Colas)**: El comportamiento del material cuando una máquina está ocupada.
+- **Transportadores**: Manejo de materiales (bandas transportadoras, montacargas, AGVs).
+- **Turnos de trabajo**: Asignación de horarios, descansos y disponibilidad operativa del personal y máquinas.
+
+- **Localización:** Representaciones de espacios físicos o lugares donde las entidades son transformadas.
+- **Atributo**: Características o propiedades que identifican a una entidad o localización.
+- **Evento**: Suceso que hace cambiar el estado del sistema.
+- **Estado**: Conjunto de valores (atributos) necesarios para describir la situación del sistema en un punto del tiempo dado.
+- **Tiempo de simulación**: Es el valor del tiempo que el simulador puede avanzar a una velocidad superior a la habitual de un reloj común, evolucionando así el estado de un sistema de forma acelerada.
+
+## Descripción de un proceso: Línea de fabricación de sillas de madera
+
+### Definición del sistema
+
+Una pequeña fábrica produce sillas de madera mediante un proceso de dos etapas consecutivas:
+* **Etapa 1: Creado de piezas (Corte y Lijado)** – Ejecutado por la **Máquina A**.
+* **Etapa 2: Ensamblado y Pintado** – Ejecutado por la **Máquina B**.
+
+<!-- .slide: data-background="slategray" -->
+<iframe data-src="sistema1.html" data-preload width="100%" height="500px"></iframe>
+
+### Datos de entrada (Parámetros del sistema)
+
+* **Entidades:** Tablas de madera / Piezas procesadas.
+* **Proceso de Arribo:** Llega un lote con madera suficiente para 1 silla cada **10 minutos**.
+* **Capacidad y Tiempo de Proceso:**
+	* **Máquina A:** Atiende 1 silla a la vez. Tiempo de proceso = **8 minutos por silla**.
+	* **Máquina B:** Atiende 1 silla a la vez. Tiempo de proceso = **15 minutos por silla**.
+* **Recursos:** 1 operador por máquina (turnos de 8 horas = 480 minutos).
+* **Condición inicial:** La planta inicia completamente vacía a las 8:00 AM.
+
+##### [Simulación paso a paso (Primeros 30 minutos)](tabla1.html)
+<iframe data-src="tabla1.html" data-preload width="100%" height="500px"></iframe>
+
+### Resultados al final de la jornada de 8 horas (480 minutos)
+
+* **Producción de Máquina A:** En 480 minutos, con un tiempo de 8 min/silla, puede procesar hasta **60 sillas**.
+* **Capacidad máxima de Máquina B:** En 480 minutos, con un tiempo de 15 min/silla, solo puede procesar **32 sillas**.
+* **Sillas completadas (Throughput del sistema):** **32 sillas por turno**.
+* **Inventario en proceso (WIP en Cola 2):** Se acumulan **28 sillas en espera** entre la Máquina A y la Máquina B.
+
+### Diagnóstico e identificación del problema
+
+1. **Cuello de botella:** La **Máquina B** es el cuello de botella del sistema porque su tiempo de ciclo (15 min) es mayor que la tasa de llegada del proceso anterior (8 min).
+2. **Utilización de recursos:**
+	* **Máquina B:** Trabajó al **100% de su capacidad** durante todo el turno.
+	* **Máquina A:** Estuvo ociosa parte del tiempo una vez acumulado el material, operando muy por debajo de su potencial útil relativo a la salida real de la planta.
+
+3. **Acumulación de costos:** Mantener 28 sillas atascadas en la **Cola 2** genera costo de almacenamiento en proceso y desperdicio de espacio operativo en planta.
+
+### Propuesta de mejora mediante simulación
+
+Antes de gastar dinero en la vida real, se simulan dos alternativas en el software:
+
+* **Alternativa 1 (Inversión):** Comprar una segunda **Máquina B** idéntica y trabajar en paralelo.
+	* *Resultado simulación:* El tiempo medio de ensamble/pintado baja a 7.5 min por silla. La producción total sube de 32 a **48 sillas/turno** (limitada ahora por la llegada de materia prima cada 10 min) y la cola disminuye a 0.
+
+* **Alternativa 2 (Balanceo de línea sin compra):** Rediseñar el proceso reduciendo tareas secundarias de la Máquina B (por ejemplo, preparar la pintura fuera de la máquina) para bajar su tiempo de 15 a 10 minutos.
+	* *Resultado simulación:* La producción sube de 32 a **48 sillas/turno** con costo $0 de maquinaria.
 </textarea>
 </section>
 
