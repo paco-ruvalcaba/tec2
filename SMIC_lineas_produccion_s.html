@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Ing. Industrial</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/league.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
+		<link rel="stylesheet" href="dist/theme/night.css">
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/moon.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ...................................................................................  -->
+<!-- .........................Inicio de la presentación.................................  -->
+<!-- ...................................................................................  -->
+<section>
+	<!-- <a href="https://revealjs.com"> -->
+	<!-- <img src="uttlogo.png" alt="UTT Logo" style="background: transparent;" class="demo-logo"> -->
+	<!-- </a> -->
+	<h2>Diseño de líneas de producción</h2>
+	<!-- <h2>Momento de torsión y equilibrio rotacional</h2> -->
+	<p>
+	<small>Maestro: <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+	</small>
+	</p>
+</section>
+
+
+				<section data-markdown
+				data-separator="^---"
+				data-separator-vertical="^\n"
+				data-separator-notes="^Nota:">
+				<textarea data-template>
+<!-- .slide: data-background="slategray" -->
+# INTRODUCCION
+Nota:
+Con el advenimiento de la computadora, una de las más importan- tes herramientas para analizar el diseño y operación de sistemas o pro- cesos complejos es la simulación.<br><br>
+Aunque la construcción de modelos arranca desde el Renacimiento, el uso moderno de la palabra simulación data de 1940, cuando los científicos Von Neuman y Ulam que trabajaban en el proyecto Monte Carlo, durante la Segunda Guerra Mundial, resolvieron problemas de reacciones nucleares cuya solución experimental sería muy cara y el análisis matemático demasiado complicado.<br><br>
+Con la utilización de la computadora en los experimentos de simu- lación, surgieron incontables aplicaciones y con ello, una cantidad mayor de problemas teóricos y prácticos. En este libro se intenta por consiguiente, investigar y analizar cierto número de aplicaciones im- portantes de simulación de las áreas de economía, administración de negocios e investigación de operaciones, así como también sugerir al- gunos métodos alternativos para resolver algunos problemas teóricos y prácticos que surgen al efectuar simulaciones reales.
+---
+## Definición de simulación
+
+> Simulación es una técnica numérica para conducir experimentos en una computadora digital. Estos experimentos comprenden ciertos tipos de relaciones matemáticas y lógicas, las cuales son necesarias para describir el comportamiento y la estructura de sistemas complejos del mundo real a través de largos períodos de tiempo.<br><br> *Thomas H. Naylor*
+Nota:
+Se ha empezado a utilizar la palabra simulación sin haber dado pre- viamente una definición de ella. Por consiguiente, antes de proseguir con la discusión de este tema, sería conveniente describir algunas de las definiciones más aceptadas y difundidas de la palabra simulación. Thomas H. Naylor la define asi:
+
+> Simulación es una técnica numérica para realizar experimentos en una computadora digital. Estos experimentos involucran ciertos tipos de mo- delos matemáticos y lógicos que describen el comportamiento de siste- mas de negocios, económicos, sociales, biológicos, fisicos o químicos a través de largos periodos de tiempo. -- *H. Maisel y G. Gnugnoli*
+Nota:
+La definición anterior está en un sentido muy amplio, pues puede incluir desde una maqueta, hasta un sofisticado programa de compu- tadora. En sentido más estricto, H. Maisel y G. Gnugnoli, definen simulación como:
+
+> Simulación es el proceso de diseñar y desarrollar un modelo computarizado de un sistema o proceso y conducir experimentos con este modelo con el propósito de entender el comportamiento del sistema o evaluar varias estrategias con las cuales se puede operar el sistema. -- *Robert E. Shannon*
+Nota:
+Otros estudiosos del tema como Robert E. Shannon, definen simulación como:
+---
+## ETAPAS PARA REALIZAR UN ESTUDIO DE SIMULACION
+
+- <!-- .element: class="fragment" --> Definición del sistema.
+- <!-- .element: class="fragment" --> Formulación del modelo.
+- <!-- .element: class="fragment" --> Colección de datos.
+- <!-- .element: class="fragment" --> Implementación del modelo en la computadora.
+- <!-- .element: class="fragment" --> Validación
+Nota:
+Se ha escrito mucho acerca de los pasos necesarios para realizar un estudio de simulación. Sin embargo, la mayoría de los autores opinan que los pasos necesarios para llevar a cabo un experimento de simulación son:
+**Definición del sistema**. Para tener una definición exacta del sistema que se desea simular, es necesario hacer primeramente un análisis preliminar del mismo, con el fin de determinar la interacción del sistema con otros sistemas, las restricciones del sistema, las variables que interactúan dentro del sistema y sus interrelaciones, las medidas de efectividad que se van a utilizar para definir y estudiar el sistema y los resultados que se esperan obtener del estudio.<br><br>
+**Formulación del modelo**. Una vez que están definidos con exactitud los resultados que se esperan obtener del estudio, el siguiente paso es definir y construir el modelo con el cual se obtendrán los resultados deseados. En la formulación del modelo es necesario definir todas las variables que forman parte de él, sus relaciones lógicas y los diagramas de flujo que describan en forma completa al modelo.<br><br>
+**Colección de datos**. Es posible que la facilidad de obtención de algunos datos o la dificultad de conseguir otros, pueda influenciar el desarrollo y formulación del modelo. Por consiguiente, es muy importante que se definan con claridad y exactitud los datos que el modelo va a requerir para producir los resultados deseados. Normalmente, la información requerida por un modelo se puede obtener de registros contables, de órdenes de trabajo, de órdenes de compra, de opiniones de expertos y si no hay otro remedio por experimentación.<br><br>
+**Implementación del modelo en la computadora**. Con el modelo definido, el siguiente paso es decidir si se utiliza algún lenguaje como fortran, basic, algol, etc., o se utiliza algún paquete como GPSS, simula, simscript, etc., para procesarlo en la computadora y obtener los resultados deseado.<br><br>
+**Validación**. Una de las principales etapas de un estudio de simulación es la validación. A través de esta etapa es posible detallar deficiencias en la formulación del modelo o en los datos alimentados al modelo. Las formas más comunes de validar un modelo son:<br>
+1. La opinión de expertos sobre los resultados de la simulación.<br>
+2. La exactitud con que se predicen datos históricos.<br>
+3. La exactitud en la predicción del futuro.<br>
+4. La comprobación de falla del modelo de simulación al utilizar datos que hacen fallar al sistema real.<br>
+5. La aceptación y confianza en el modelo de la persona que hará uso de los resultados que arroje el experimento de simulación
+
+- <!-- .element: class="fragment" --> Experimentación
+- <!-- .element: class="fragment" --> Interpretación
+- <!-- .element: class="fragment" --> Documentación
+Nota:
+**Experimentación**. La experimentación con el modelo se realiza después de que éste ha sido validado. La experimentación consiste en generar los datos deseados y en realizar análisis de sensibilidad de los índices requeridos.<br>
+**Interpretación**. En esta etapa del estudio, se interpretan los resultados que arroja la simulación y en base a esto se toma una decisión. Es obvio que los resultados que se obtienen de un estudio de simulación ayudan asoportar decisiones del tipo semi-estructurado, es decir, la computadora en sí no toma la decisión, sino que la información que proporciona ayuda a tomar mejores decisiones y por consiguiente a sistemáticamente obtener mejores resultados.<br>
+**Documentación**. Dos tipos de documentación son requeridos para hacer un mejor uso del modelo de simulación. La primera se refiere a la documentación de tipo técnico, es decir, a la documentación que el departamento de Procesamiento de Datos debe tener del modelo. La segunda se refiere al manual del usuario, con el cual se facilita la interacción y el uso del modelo desarrollado. a través de una terminal de computadora.<br>
+---
+## FACTORES A CONSIDERAR EN EL DESARROLLO DEL MODELO DE SIMULACION
+
+Puesto que la simulación está basada fuertemente en la teoria de probabilidad y estadística, en matemáticas, en ciencias computacionales, etc., es conveniente decir algunas ideas de cómo intervienen estas áreas en el desarrollo y formulación del modelo de simulación.
+
+- <!-- .element: class="fragment" --> Generación de variables aleatorias no-uniformes
+- <!-- .element: class="fragment" --> Lenguajes de programación
+- <!-- .element: class="fragment" --> Condiciones iniciales
+- <!-- .element: class="fragment" --> Tamaño de la muestra
+- <!-- .element: class="fragment" -->  Diseño de experimentos
+Nota:
+**Generación de variables aleatorias no-uniformes.** Sí el modelo de simulación es estocástico, la simulación debe ser capaz de generar variables aleatorias no-uniformes de distribuciones de probabilidad teóricas o empíricas. Lo anterior puede ser obtenido si se cuenta con un generador de números uniformes y una función que transforme estos números en valores de la distribución de probabilidad deseada. A este respecto, se han desarrollado una gran cantidad de generadores para las distribuciones de probabilidad más comunes como: La distribución normal, la distribución exponencial, la distribución poisson, la distribución erlang, la distribución binomial, la distribución gamma, la distribución beta, la distribución F, la distribución t, etc.<br>
+**Lenguajes de programación.** Las primeras etapas de un estudio de simulación se refieren a la de finición del sistema a ser modelado y a la descripción del sistema en términos de relaciones lógicas de sus variables y diagramas de flujo. Sin embargo, llega el momento de describir el modelo en un lenguaje que sea aceptado por la computadora que se va a usar. En esta etapa se tienen dos cursos de acción a seguir si no se tiene nada de software sobre simulación: 1) Desarrollar el software requerido para estudios de simulación, ó 2) Comprar software (lenguajes de programación de propósito especial). Para esta alternativa es necesario analizar y evaluar varios paquetes de simulación (GPSS, GASP, etc.) antes de tomar la decisión final<br>
+**Condiciones iniciales.** La mayoría de los modelos de simulación estocástica se corren con la idea de estudiar al sistema en una situación de estado estable. Sin embargo, la mayoría de estos modelos presentan en su etapa inicial estados transientes los cuales no son típicos del estado estable. Por consiguiente es necesario establecer claramente las alternativas o cursos de acción que existen para resolver este problema. <br>
+**Tamaño de la muestra.** Uno de los factores principales a considerar en un estudio de simu lación es el tamaño de la muestra (número de corridas en la computadora). La selección de un tamaño de muestra apropiado que asegure un nivel deseado de precisión y a la vez minimice el costo de operación del modelo, es un problema algo dificil pero muy importante. Puesto que la información proporcionada por el experimento de simulación sería la base para decidir con respecto a la operación del sistema real, esta información deberá ser tan exacta y precisa como sea posible o al menos el grado de imprecisión presente en la información proporcionada por el modelo debe ser conocida. Por consiguiente, es necesario que un análisis estadístico sea realizado para determinar el tamaño de muestra requerido.<br>
+**Diseño de experimentos.** El diseño de experimentos es un tópico cuya relevancia en experimentos de simulación ha sido reconocida pero raramente aplicado. El diseño de experimentos en estudios de simulación puede ser de varios tipos, dependiendo de los propósitos específicos que se hayan planteado. Existen varios tipos de análisis que pueden ser requeridos.<br>
+---
+## EJEMPLOS DE USOS DE SIMULACION
+
+- <!-- .element: class="fragment" --> Simulación de un sistema de colas
+- <!-- .element: class="fragment" --> Simulación de un sistema de inventarios.
+- <!-- .element: class="fragment" --> Simulación de un proyecto de inversión.
+- <!-- .element: class="fragment" --> Simulación de sistemas económicos
+- <!-- .element: class="fragment" --> Simulación de estados financieros
+Nota:
+**Simulación de un sistema de colas.** Con la técnica de simulación es posible estudiar y analizar sistemas de colas cuya representación matemática sería demasiado complicada de analizar. Ejemplos de estos sistemas serían aquellos donde es posible la llegada al sistema en grupo, la salida de la cola del sistema, el rehusar entrar al sistema cuando la cola es excesivamente grande, etc.<br>
+**Simulación de un sistema de inventarios**. A través de simu lación se pueden analizar más fácilmente sistemas de inventarios donde todos sus parámetros (tiempo de entrega, demanda, costo de llevar inventario, etc.), son estocásticos.<br>
+**Simulación de un proyecto de inversión.** Existen en la práctica una gran cantidad de proyectos de inversión donde la incertidumbre con respecto a los flujos de efectivo que el proyecto genera a las tasas de interés, a las tasas de inflación, etc., hacen dificil y a veces imposible manejar analíticamente este tipo de problemas. Para este tipo de situaciones el uso de simulación es ampliamente recomendado.<br>
+**Simulación de sistemas económicos**. La técnica de simulación puede ser utilizada para evaluar el efecto de cierto tipo de decisiones (devaluación de la moneda, el impuesto al valor agregado, etc.), en las demás variables macroeconómicas como: producto nacional bruto, balanza comercial, inflación, oferta monetaria, circulante, etc.<br>
+**Simulación de estados financieros**. La expansión y diversificación de una organización a través de la adquisición y establecimiento de nuevas empresas, repercuten significativamente en su posición y estructura financiera. Por consiguiente, el uso de simulación permite analizar cuál de las estrategias de crecimiento son las que llevarán a la organización al logro de sus objetivos y metas de corto, mediano y largo plazos.<br>
+---
+<!-- .slide: data-background="slategray" -->
+## Diseño y optimización de líneas de producción industrial
+
+El objetivo principal de esta unidad es enseñar a modelar, analizar y mejorar el flujo de trabajo dentro de una planta o fábrica antes de implementarlo físicamente, minimizando costos y eliminando cuellos de botella.
+
+## Elementos de un sistema
+
+- **Entidades:** Las materias primas, piezas o productos que avanzan por la línea.
+- **Procesos de arribo:** El ritmo e intervalo con el que entran los materiales al sistema.
+- **Recursos y equipos**: Maquinaria, herramientas y personal disponible, definiendo sus capacidades máximas.
+- **Líneas de espera (Colas)**: El comportamiento del material cuando una máquina está ocupada.
+- **Transportadores**: Manejo de materiales (bandas transportadoras, montacargas, AGVs).
+- **Turnos de trabajo**: Asignación de horarios, descansos y disponibilidad operativa del personal y máquinas.
+
+- **Localización:** Representaciones de espacios físicos o lugares donde las entidades son transformadas.
+- **Atributo**: Características o propiedades que identifican a una entidad o localización.
+- **Evento**: Suceso que hace cambiar el estado del sistema.
+- **Estado**: Conjunto de valores (atributos) necesarios para describir la situación del sistema en un punto del tiempo dado.
+- <small>**Tiempo de simulación**: Es el valor del tiempo que el simulador puede avanzar a una velocidad superior a la habitual de un reloj común, evolucionando así el estado de un sistema de forma acelerada.</small>
+
+## Descripción de un proceso: Línea de fabricación de sillas de madera
+
+### Definición del sistema
+
+Una pequeña fábrica produce sillas de madera mediante un proceso de dos etapas consecutivas:
+* **Etapa 1: Creado de piezas (Corte y Lijado)** – Ejecutado por la **Máquina A**.
+* **Etapa 2: Ensamblado y Pintado** – Ejecutado por la **Máquina B**.
+
+<!-- .slide: data-background="white" -->
+<iframe data-src="sistema1.html" data-preload width="100%" height="500px"></iframe>
+
+### Datos de entrada (Parámetros del sistema)
+
+* **Entidades:** Tablas de madera / Piezas procesadas.
+* **Proceso de Arribo:** Llega un lote con madera suficiente para 1 silla cada **10 minutos**.
+* **Capacidad y Tiempo de Proceso:**
+	* **Máquina A:** Atiende 1 silla a la vez. Tiempo de proceso = **8 minutos por silla**.
+	* **Máquina B:** Atiende 1 silla a la vez. Tiempo de proceso = **15 minutos por silla**.
+* **Recursos:** 1 operador por máquina (turnos de 8 horas = 480 minutos).
+* **Condición inicial:** La planta inicia completamente vacía a las 8:00 AM.
+
+##### [Simulación paso a paso (Primeros 30 minutos)](tabla1.html)
+<iframe data-src="tabla1.html" data-preload width="100%" height="500px"></iframe>
+
+### Resultados al final de la jornada de 8 horas (480 minutos)
+
+* **Producción de Máquina A:** En 480 minutos, con un tiempo de 8 min/silla, puede procesar hasta **60 sillas**.
+* **Capacidad máxima de Máquina B:** En 480 minutos, con un tiempo de 15 min/silla, solo puede procesar **32 sillas**.
+* **Sillas completadas (Throughput del sistema):** **32 sillas por turno**.
+* **Inventario en proceso (WIP en Cola 2):** Se acumulan **28 sillas en espera** entre la Máquina A y la Máquina B.
+
+### Diagnóstico e identificación del problema
+
+1. **Cuello de botella:** La **Máquina B** es el cuello de botella del sistema porque su tiempo de ciclo (15 min) es mayor que la tasa de llegada del proceso anterior (8 min).
+2. **Utilización de recursos:**
+	* **Máquina B:** Trabajó al **100% de su capacidad** durante todo el turno.
+	* **Máquina A:** Estuvo ociosa parte del tiempo una vez acumulado el material, operando muy por debajo de su potencial útil relativo a la salida real de la planta.
+
+3. **Acumulación de costos:** Mantener 28 sillas atascadas en la **Cola 2** genera costo de almacenamiento en proceso y desperdicio de espacio operativo en planta.
+
+### Propuesta de mejora mediante simulación
+
+Antes de gastar dinero en la vida real, se simulan dos alternativas en el software:
+
+* **Alternativa 1 (Inversión):** Comprar una segunda **Máquina B** idéntica y trabajar en paralelo.
+	* *Resultado simulación:* El tiempo medio de ensamble/pintado baja a 7.5 min por silla. La producción total sube de 32 a **48 sillas/turno** (limitada ahora por la llegada de materia prima cada 10 min) y la cola disminuye a 0.
+
+* **Alternativa 2 (Balanceo de línea sin compra):** Rediseñar el proceso reduciendo tareas secundarias de la Máquina B (por ejemplo, preparar la pintura fuera de la máquina) para bajar su tiempo de 15 a 10 minutos.
+	* *Resultado simulación:* La producción sube de 32 a **48 sillas/turno** con costo $0 de maquinaria.
+</textarea>
+</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				showNotes: true,
+				hash: true,
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>
+
