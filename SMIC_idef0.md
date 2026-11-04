@@ -1,30 +1,29 @@
-apreciados alumnos del curso diseño del trabajo compañeros tutores y nuestro
+# INTRODUCCIÓN
 
-director un saludo fraternal Mi nombre es Luis Alfonso Castro Calderón Soy ingeniero industrial
 
-docente de la unad especialista en riesgo laborales
 
-en compañía de del grupo de trabajo Los tutores y nuestro director hemos decidido
-
-allanar un poquito más el camino de esta tarea que pues es un poquito larga guiándoles hacia el desarrollo de los
-diagramas de la mejor manera puesto que hemos tenido por experiencia que en los periodos pasados Se ha perdido mucho
-tiempo en la explicación casi que persona a persona de Cómo realizar estos diagramas principalmente
-la metodología y de Cero y los cursosgramas analítico y sinóptico en mi
-caso voy a hacer una pequeño
-[Música]
-esbozo sobre cómo van a realizar ustedes esta metodología este diagrama que es un diagrama de flujo
-Cómo se deben colocar y cómo se ve realizar para que la comprensión sea mucho mejor
-la metodología y de cero es una metodología que conserva una estructura jerárquica de
-cada una de las actividades que integran dentro de las actividades y de por sí en en dentro del proceso en general
+- Estructura Jerarquica de actividades de un proceso productivo
+- Combina gráficos y textos facilitando el análisis de los procesos
+- Mide la efectividad de la interacción entre las actividades del proceso
+- Se utiliza para obtener una visión estratégica de un proceso
+Nota:
+la metodología y de cero es una metodología que conserva una estructura jerárquica de cada una de las actividades que integran dentro de las actividades y de por sí en en dentro del proceso en general
 se realiza se desarrolla combinando gráficos cajas flechas y texto para que el
 análisis que se haga sea más más efectivo también
 esta metodología podemos ver cómo es la interacción entre cada una de las actividades del proceso y de esta manera
 pues la visibilidad se verá más
- amplia y Clara sobre cada uno de estos procesos y se podrán tomar decisiones
- con más base para buscar la mejora de cada una de estas actividades y al final
- del proceso Entonces como les decía esto es una definición en la metodología
- y de en español es definición de integración para el modelado de funciones y se consideran tipo de
- diagrama de flujo cómo vamos a diseñar las cajas las cajas representan una actividad
+amplia y Clara sobre cada uno de estos procesos y se podrán tomar decisiones
+con más base para buscar la mejora de cada una de estas actividades y al final
+del proceso Entonces como les decía esto es una definición en la metodología
+y de en español es definición de integración para el modelado de funciones y se consideran tipo de
+diagrama de flujo 
+ 
+La metodología IDEF0 entra en lo que se denomina "DEFINICIÓN DE INTEGRACIÓN PAARA EL MODELADO DE FUNCIONES".
+Se considera un tipo de diagrama de flujo.
+---
+# REPRESENTACION DE UNA ACTIVIDAD
+[](repap.svg)
+ cómo vamos a diseñar las cajas las cajas representan una actividad
  si vamos a hacer pan entonces la primer caja es donde vamos a hacer la masa cierto Entonces cómo va se va a
 representar eso a grandes rasgos tenemos la actividad por la parte izquierda
 viene las entradas y los insumos lo que vayas en la materia prima o la parte superior tenemos los elementos de
