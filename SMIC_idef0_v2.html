@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Ing. Industrial</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/league.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
+		<link rel="stylesheet" href="dist/theme/night.css">
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/moon.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ...................................................................................  -->
+<!-- .........................Inicio de la presentación.................................  -->
+<!-- ...................................................................................  -->
+<section>
+	<!-- <a href="https://revealjs.com"> -->
+	<!-- <img src="uttlogo.png" alt="UTT Logo" style="background: transparent;" class="demo-logo"> -->
+	<!-- </a> -->
+	<h2>METODOLOGIA IDEF0</h2>
+	<!-- <h2>Momento de torsión y equilibrio rotacional</h2> -->
+	<p>
+	<small>Maestro: <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+	</small>
+	</p>
+</section>
+
+
+				<section data-markdown
+				data-separator="^---"
+				data-separator-vertical="^\n"
+				data-separator-notes="^Nota:">
+				<textarea data-template>
+# Introducción
+
+Los mapas de procesos ideales son coherentes, fáciles de entender y legibles sin necesidad de consultar documentos complementarios.
+<br><img src="https://www.edenred.es/wp-content/uploads/2020/01/mapa-de-procesos.jpg" width="200px">
+Nota:
+Deben ser tan fáciles de utilizar como un mapa de carreteras o un atlas, proporcionando al usuario el nivel de detalle que necesita, ni más ni menos.
+
+Se presenta IDEF como una notación para procesos empresariales que ofrece una alternativa más sencilla a la notación BPMN, la cual es más conocida.
+
+## Introducción a IDEF0 e IDEF3:
+- IDEF0 se utiliza para modelar funciones empresariales.
+- IDEF3 se utiliza para modelar procesos empresariales.
+
+La sencillez de IDEF0 hace que su uso sea muy rápido y simple:
+- Los cuadros definen funciones, procesos o una empresa en su totalidad;
+- las flechas indican las conexiones, y 
+- las etiquetas asociadas a dichas flechas definen su propósito.
+<br>[![](cuadrosflechas.svg)](https://excalidraw.com/#json=qoBMbFbuemJR_isiWqxiq,c_fGvo3xnDBma7TDxhn8uA)
+
+- Estructura Jerarquica de actividades de un proceso productivo
+- Combina gráficos y textos facilitando el análisis de los procesos
+- Mide la efectividad de la interacción entre las actividades del proceso
+- Se utiliza para obtener una visión estratégica de un proceso
+
+- La metodología IDEF0 entra en lo que se denomina "DEFINICIÓN DE INTEGRACIÓN PAARA EL MODELADO DE FUNCIONES".
+- Se considera un tipo de diagrama de flujo.
+
+El mapeo comienza con un recuadro que describe la función que se desea mapear.
+[![](repap_d.svg)](https://excalidraw.com/#json=RgY9ait3FtiM44ew0dRNL,J8gapZKYMUhQVHj-tJkgaw)
+Nota:
+A continuación, se añaden al recuadro flechas que representan Entradas (Inputs), Controles (Controls), Salidas (Outputs) y Mecanismos (Mechanisms); a este conjunto se le denomina ICOM. El término «Mecanismo» puede resultar confuso, pero hace referencia a los recursos necesarios para que el proceso funcione. En la variante IGOE de IDEF, el término «Mecanismo» se sustituye por «Facilitador» (Enabler).
+
+IDEF0 e IDEF3 pueden utilizarse para analizar cualquier función o proceso empresarial.
+Nota:
+Los he empleado para definir los procesos clave y las reglas de negocio en diversas funciones organizativas, que abarcan desde la manufactura hasta los recursos humanos y el diseño operativo. Dado que IDEF emplea un lenguaje sencillo y elementos gráficos, permite que los usuarios de negocio y los expertos en la materia colaboren para comprender, revisar, mejorar y diseñar procesos empresariales con rapidez.
+
+La directriz de IDEF, que recomienda incluir entre 3 y 6 cajas en cada diagrama, ayuda a evitar detalles innecesarios.<br>
+[![](3cajas.svg)](https://excalidraw.com/#json=NhnpL4nrmny6VjbI8VuCv,CFXWRNlyi3IMNOHGdMr6nw)
+Nota:
+(en la práctica, se admite un máximo de ocho cajas). Si se requiere mayor nivel de detalle, este se incorpora mediante la creación de diagramas subordinados.
+---
+## Construcción de diagramas IDEF
+
+Los diagramas IDEF0 e IDEF3 pueden utilizarse, respectivamente, para ofrecer una visión funcional y una visión de procesos de las actividades dentro de una organización.
+![17a3de246371bd4baf96c9f4bdc46676.png](diagrama.png)<br>
+Los diagramas IDEF3 muestran los pasos del proceso y las decisiones en el nivel más bajo de descomposición.
+Nota:
+IDEF0 proporciona una visión funcional de las actividades dentro de una organización.
+Las decisiones no se muestran en los diagramas IDEF0. Las decisiones son actividades dentro de una función y se ejecutan conforme a reglas de negocio establecidas. Estos diagramas muestran QUÉ es lo que se requiere, no CÓMO se lleva a cabo.
+
+### Ramificaciones y uniones
+
+La lógica de un mapa se explica mediante las flechas que conectan los cuadros. Cualquier flecha de salida puede convertirse en una entrada, un control o un mecanismo para cualquier otro cuadro posterior.
+
+![](ramas.png)
+Nota:
+Las flechas pueden ramificarse para indicar que se conectan a más de un cuadro, tal como se muestra en la Figura; asimismo, pueden unirse para indicar que, en conjunto, generan un resultado específico, como se ilustra más adelante.
+---
+# Inicio de un mapa IDEF0
+
+## Definición raíz
+
+Esta define claramente el propósito de la empresa o entidad que se está analizando.
+Nota:
+Por ejemplo, el propósito de un automóvil podría definirse como: transportar de manera segura y fiable a una familia de cuatro personas y su equipaje, a un costo razonable. Sabemos qué queremos que haga, qué recursos necesita y qué reglas se aplican a su uso, pero no es necesario conocer cómo funciona internamente. Como conductor, es posible que solo te interesen el combustible y los neumáticos. Como mecánico que intenta diagnosticar por qué el motor no arranca, el nivel de detalle requerido puede descender hasta el grado más bajo de descomposición (es decir, el componente más pequeño del conjunto), como, por ejemplo, las bujías.
+
+## Creación de un modelo
+
+Defina el propósito de la empresa —por ejemplo, elaborar pan para su venta al público— y, a continuación, identifique los insumos, controles, productos y mecanismos necesarios.
+
+![](act1.svg)
+Nota:
+Este modelo sencillo proporciona un contexto para los procesos y actividades dentro de la empresa. No requiere conocimientos sobre notaciones de mapeo de procesos y utiliza lenguaje natural.
+
+![](act1_act2.svg)
+Nota:
+Al «abrir» el bloque correspondiente se revelan las funciones de apoyo. Cabe señalar que las flechas que entran y salen del mapa aparecen tanto en el mapa principal como en los subordinados, a menos que estén canalizadas. 
+</textarea>
+</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				showNotes: false,
+				hash: true,
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>
+

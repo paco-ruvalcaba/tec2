@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Ing. Industrial</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<!-- <link rel="stylesheet" href="dist/theme/league.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/beige.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/night.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/simply.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/solarized.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/moon.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/dracula.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="dist/theme/blood.css"> -->
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+	<script src="plugin/math/math.js"></script>
+
+		<div class="reveal">
+			<div class="slides">
+
+<!-- ...................................................................................  -->
+<!-- .........................Inicio de la presentación.................................  -->
+<!-- ...................................................................................  -->
+<section>
+	<!-- <a href="https://revealjs.com"> -->
+	<!-- <img src="uttlogo.png" alt="UTT Logo" style="background: transparent;" class="demo-logo"> -->
+	<!-- </a> -->
+	<h2>Introducción al Modelado de Procesos con IDEF0 e IDEF3</h2>
+	<!-- <h2>Momento de torsión y equilibrio rotacional</h2> -->
+	<p>
+	<small>Maestro: <a href="https://franciscoruvalcaba.carrd.co/">Francisco Ruvalcaba Grandos</a>
+	</small>
+	</p>
+</section>
+
+
+				<section data-markdown
+				data-separator="^---"
+				data-separator-vertical="^\n"
+				data-separator-notes="^Nota:">
+				<textarea data-template>
+# Introducción
+
+Los mapas de procesos ideales son coherentes, fáciles de entender y legibles sin necesidad de consultar documentos complementarios.
+<br><img src="https://www.edenred.es/wp-content/uploads/2020/01/mapa-de-procesos.jpg" width="200px">
+Nota:
+Deben ser tan fáciles de utilizar como un mapa de carreteras o un atlas, proporcionando al usuario el nivel de detalle que necesita, ni más ni menos.
+
+Se presenta IDEF como una notación para procesos empresariales que ofrece una alternativa más sencilla a la notación BPMN, la cual es más conocida.
+
+## Introducción a IDEF0 e IDEF3:
+- IDEF0 se utiliza para modelar funciones empresariales.
+- IDEF3 se utiliza para modelar procesos empresariales.
+
+La sencillez de IDEF0 hace que su uso sea muy rápido y simple:
+- Los cuadros definen funciones, procesos o una empresa en su totalidad;
+- las flechas indican las conexiones, y 
+- las etiquetas asociadas a dichas flechas definen su propósito.
+<br>![](cuadrosflechas.svg)
+
+El mapeo comienza con un recuadro que describe la función que se desea mapear.
+
+A continuación, se añaden al recuadro flechas que representan Entradas (Inputs), Controles (Controls), Salidas (Outputs) y Mecanismos (Mechanisms); a este conjunto se le denomina ICOM. El término «Mecanismo» puede resultar confuso, pero hace referencia a los recursos necesarios para que el proceso funcione. En la variante IGOE de IDEF, el término «Mecanismo» se sustituye por «Facilitador» (Enabler).
+
+IDEF0 e IDEF3 pueden utilizarse para analizar cualquier función o proceso empresarial. Los he empleado para definir los procesos clave y las reglas de negocio en diversas funciones organizativas, que abarcan desde la manufactura hasta los recursos humanos y el diseño operativo.
+
+Dado que IDEF emplea un lenguaje sencillo y elementos gráficos, permite que los usuarios de negocio y los expertos en la materia colaboren para comprender, revisar, mejorar y diseñar procesos empresariales con rapidez.
+
+La directriz de IDEF, que recomienda incluir entre 3 y 6 cajas en cada diagrama, ayuda a evitar detalles innecesarios (en la práctica, se admite un máximo de ocho cajas). Si se requiere mayor nivel de detalle, este se incorpora mediante la creación de diagramas subordinados.
+
+En opinión del autor, la limitación de 3 a 6 cajas no supone un inconveniente. Por lo general, los pasos funcionales son tan sencillos como se muestra a continuación:
+
+![207ffab612e49290b86ec160fbf0d5c5.png](:/30e12015e6e54c77bc70e89e93a74c32)
+
+Las actividades contenidas en el recuadro 4, «Acción», pueden mostrarse dentro de un mapa secundario. Los mapas secundarios se indican mediante un contorno sombreado en el recuadro principal.
+
+## «Tunnelling»
+
+Cuando una flecha conectada a una caja se somete a un proceso de «tunnelling» (encapsulamiento) en su extremo de conexión (la punta de la flecha), esto significa que no es necesario mostrarla en el diagrama hijo, ya que se aplica a todas las actividades en ese nivel. Aplicar «tunnelling» a una flecha en su extremo no conectado indica que los datos o la entrada no son relevantes para el diagrama padre, o bien que no provienen de él. Esta técnica también ayuda a reducir la saturación de detalles innecesarios en un diagrama. Más adelante, en este documento, se presentan ejemplos de «tunnelling».
+
+## Construcción de diagramas IDEF
+
+Los diagramas IDEF0 e IDEF3 pueden utilizarse, respectivamente, para ofrecer una visión funcional y una visión de procesos de las actividades dentro de una organización.
+
+IDEF0 proporciona una visión funcional de las actividades dentro de una organización.
+
+![17a3de246371bd4baf96c9f4bdc46676.png](:/4e361bf33cd943c6912343692e845830)
+
+Las decisiones no se muestran en los diagramas IDEF0. Las decisiones son actividades dentro de una función y se ejecutan conforme a reglas de negocio establecidas. Estos diagramas muestran QUÉ es lo que se requiere, no CÓMO se lleva a cabo.
+
+Los diagramas IDEF3 muestran los pasos del proceso y las decisiones en el nivel más bajo de descomposición.
+
+![185abc5f01fb08e987463c77c5c84228.png](:/28f9f927b6f5480e8f580ccfe2224434)
+
+### Ramificaciones y uniones
+La lógica de un mapa se explica mediante las flechas que conectan los cuadros. Cualquier flecha de salida puede convertirse en una entrada, un control o un mecanismo para cualquier otro cuadro posterior.
+
+Las flechas pueden ramificarse para indicar que se conectan a más de un cuadro, tal como se muestra en la Figura; asimismo, pueden unirse para indicar que, en conjunto, generan un resultado específico, como se ilustra más adelante.
+
+![96fc03b3c5e9a0ec1fb84ee9e72d7119.png](:/e7d76668471f4b3cadf968cea6c0a5bb)
+
+En el ejemplo anterior se observa la unión de flechas: los registros de calidad se generan tanto a partir de la actividad A311 («Preparación para pruebas de prototipo y de mercado») como de la actividad A314 («Gestión de la producción»).
+---
+# Inicio de un mapa IDEF0
+
+## Definición raíz
+
+Esta define claramente el propósito de la empresa o entidad que se está analizando.
+
+Por ejemplo, el propósito de un automóvil podría definirse como: transportar de manera segura y fiable a una familia de cuatro personas y su equipaje, a un costo razonable.
+Sabemos qué queremos que haga, qué recursos necesita y qué reglas se aplican a su uso, pero no es necesario conocer cómo funciona internamente.
+Como conductor, es posible que solo te interesen el combustible y los neumáticos. Como mecánico que intenta diagnosticar por qué el motor no arranca, el nivel de detalle requerido puede descender hasta el grado más bajo de descomposición (es decir, el componente más pequeño del conjunto), como, por ejemplo, las bujías.
+
+## La convención de numeración de IDEF0
+
+![cce18ba7523cd51b443811bb766c6f7a.png](:/c9ac3a7e39c54640aecd167e353ada5e)
+
+ ![5049239be1d13ff0096b638179f02780.png](:/649bbd71eb684e99971d0663fed81439)
+ 
+Los mismos principios se aplican al mapeo de los procesos dentro de una organización.
+ 
+Por ejemplo, un «automóvil» puede desglosarse en piezas que están claramente identificadas y numeradas, de modo que su ubicación dentro del vehículo queda definida, indicándonos «qué es cada cosa y dónde va cada una».
+---
+# Creación de un modelo
+
+Defina el propósito de la empresa —por ejemplo, elaborar pan para su venta al público— y, a continuación, identifique los insumos, controles, productos y mecanismos necesarios.
+
+![c8a49f18c0f96a4db6671d826ed11fe1.png](:/bd7467a1453a40c996e3f317ef9e67b1)
+
+Este modelo sencillo proporciona un contexto para los procesos y actividades dentro de la empresa. No requiere conocimientos sobre notaciones de mapeo de procesos y utiliza lenguaje natural.
+
+El símbolo (l) indica que la flecha está «canalizada» (oculta mediante un túnel) y, por tanto, no aparece en los mapas subordinados. Esto reduce la saturación visual; por ejemplo, podemos canalizar al «personal» —entendido como recurso o mecanismo—, ya ​​que este se aplica a todas las actividades. En cambio, el «suministro de gas a los hornos» no se canaliza, puesto que es un elemento específico del mapa subordinado.
+
+Al «abrir» el bloque correspondiente a la «venta al público de productos horneados», se revelan las funciones de apoyo. Cabe señalar que las flechas que entran y salen del mapa aparecen tanto en el mapa principal como en los subordinados, a menos que estén canalizadas. Por ejemplo, el mecanismo «personal» está canalizado en el mapa principal y, por consiguiente, no se muestra en el mapa subordinado.
+
+![478bad569d3f2725ee2579e8adfeda7f.png](:/a015af5191334b0fb3017eb238a2b9f4)
+
+El paso 3 de esta serie de funciones se desglosa en un mapa de procesos, tal como se muestra:
+
+![43e633f0fdb5dbbdfce12a23f330e87a.png](:/0611ebfdb46940678764c65146dd83dc)
+
+A continuación se muestra cómo apliqué el modelado IDEF0 e IDEF3 en una organización internacional.
+
+![e0fa0ac655455c66a7e18f8f74d074a5.png](:/89a331df8459423ca1c668b985e7700e)
+
+El ejemplo anterior muestra las interacciones entre funciones. Por ejemplo, las reglas y los objetivos de negocio se definen en el cuadro A1, «Dirigir y gestionar el negocio», y desde ahí se establecen conexiones con los cuadros A2, A3 y A4. La información sobre los clientes (inteligencia de clientes) fluye desde el cuadro A4, «Posventa», de vuelta al cuadro A1, sirviendo como entrada.
+
+El mapa A21, que aparece a continuación, es el mapa subordinado del cuadro A2. Este muestra los pasos funcionales dentro de A2, «Vender productos y servicios». Cabe señalar que los elementos ICOMS (entradas, controles, salidas y mecanismos) en este nivel coinciden con los del nivel superior, a menos que estén «canalizados» (por ejemplo, un elemento que aparece en este nivel pero no en el nivel superior).
+
+El contenido de cada cuadro se presenta con niveles de detalle crecientes a medida que se descompone, o se divide, en sus partes constituyentes. El mapa A0 y todos los mapas subsiguientes deben contener entre 3 y 6 cuadros; cada uno de ellos alimenta el paso o proceso siguiente, actuando como entrada, control o mecanismo.
+
+![b896326cd827d27b4753ad8b37913317.png](:/21126b373f8241f6a448e33d9da4754f)
+
+Los recuadros sombreados indican que los procesos han sido descompuestos; es decir, que existe otro nivel de detalle representado debajo de cada recuadro. Obsérvese que los extremos de las flechas que presentan un símbolo de «túnel» indican que dichos elementos no aparecen en el diagrama principal.
+
+El esquema de numeración muestra claramente la posición de los procesos y funciones dentro del modelo IDEF.
+
+![4fe2f298458ccc84bae0061f6c4a8bf5.png](:/e5807833dffc43be9b2a34e9060a2c14)
+
+El funcionamiento del recuadro A21 se detalla a continuación, en un nivel de descomposición inferior, en el diagrama siguiente. Cabe señalar que la flecha «Estrategia de ventas y servicios» aparece con un símbolo de «túnel» al entrar en el recuadro «Crear y mantener el plan de ventas». Esto significa que no se muestra en el diagrama derivado.
+
+![fd7918184edc1fab1359722d617c510b.png](:/a99cb19a2e7d49c98728a2d857230758)
+
+En el nivel más bajo de descomposición, los pasos del proceso para A211 se muestran mediante un mapa de procesos IDEF3.
+
+![36bf2ad08af0971cc0eab5a17ad5a6ff.png](:/c4d582a0f79c4bff8f53fc66e6718e7b)
+
+## Uso de capas en modelos IDEF
+Las líneas de conexión desordenadas en un diagrama pueden resultar confusas, tal como se muestra en el ejemplo a continuación.
+
+
+![2d1019e86e83ab9f221c316927081f5a.png](:/2408ce21b5d34306bfefb82d20ba5192)
+
+Los mapas resultan más fáciles y rápidos de leer cuando se emplean más líneas rectas y se minimizan los cruces entre líneas. Para reducir la saturación visual en un mapa, conviene utilizar la opción de capas —habitualmente disponible en programas de dibujo y modelado, como Microsoft Visio— con el fin de presentar la vista que requiera cada usuario en particular.
+
+## Otros usos de IDEF
+
+### El diagrama IGOE
+La sencillez de un modelo IDEF0 constituye la base del modelo IGOE. IGOE es un acrónimo que corresponde a *Input* (Entrada), *Guide* (Guía), *Output* (Salida) y *Enabler* (Facilitador). Estos representan los requisitos fundamentales de cualquier proceso empresarial. Su origen en IDEF es evidente; la principal diferencia radica en que el término «mecanismo» (*Mechanism*) se sustituye por otro más comprensible: «facilitador» (*Enabler*).
+
+### El diagrama IGOEM
+Añado métricas (Measures) a IGOE para crear un diagrama IGOEM. Las métricas de desempeño de los procesos suelen pasarse por alto en el modelado de procesos.
+
+## Conclusión
+IDEF es una notación de modelado sencilla que sirve de base para el debate y la exploración colaborativa de problemas en los procesos o de posibles mejoras. Dado que emplea un lenguaje sencillo y una notación simple, no existen barreras de conocimiento para utilizar esta técnica; a diferencia de BPMN, que a menudo se utiliza de forma inconsistente y con un exceso de símbolos.
+
+<br><br><br><br><br><br>
+
+***
+<small>Fuente: *Introduction to Business Process Mapping with IDEF0 & IDEF3* de **Brian Hunt**<small>
+</textarea>
+</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				showNotes: false,
+				hash: true,
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>
+
